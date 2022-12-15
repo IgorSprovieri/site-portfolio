@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Igor Sprovieri</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h2>Igor Sprovieri</h2>
+      <menu>
+        <a onclick="scrollPageTo('section-abilities')" class="Menu-Link">
+          Habilidades</a
+        >
+        <a onclick="scrollPageTo('section-portfolio')" class="Menu-Link">
+          Portfólio</a
+        >
+        <a onclick="scrollPageTo('section-abilities')" class="Menu-Link">
+          Experiências</a
+        >
+      </menu>
+      <section class="Social-Icons">
+        <a onclick="openNewTab('https://github.com/IgorSprovieri')">
+          <img class="Social-Icom" src="Assets/Github.png" alt="Meu GitHub" />
+        </a>
+        <a
+          onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
+        >
+          <img class="Social-Icom" src="Assets/Linkedin.png" alt="" />
+        </a>
+        <a onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')">
+          <img class="Social-Icom" src="Assets/Instagram.png" alt="" />
+        </a>
+      </section>
+    </header>
+    <main>
+      <section class="My-Presentation">
+        <div class="My-Infos">
+          <h1>
+            Olá, Muito prazer!<br />
+            Sou o Igor Sprovieri
+          </h1>
+          <p class="My-description">
+            Programador desde 2013, atuei em 16 projetos como desenvolvedor
+            Unity, abri meu estúdio de jogos e fui redator por mais de um ano do
+            site crieseusjogos.com. Atualmente tenho foco em atuar como
+            desenvolvedor web e mobile.
+          </p>
+          <button>ENTRAR EM CONTATO</button>
+        </div>
+        <img class="My-Image" src="Assets/My Photo.jpg" alt="" />
+      </section>
+
+      <section class="Title" id="section-abilities">
+        <h1>
+          Habilidades que
+          <div class="Blue">domino</div>
+        </h1>
+      </section>
+
+      <section class="My-Abilities">
+        <div class="Ability-Box">
+          <img class="Ability-img" src="Assets/General.png" alt="" />
+          <h3>Habilidades Gerais</h3>
+          <p class="Ability-Text">
+            Tecnologias que utilizo no dia a dia da programação
+          </p>
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Docker</li>
+            <li>VSCode</li>
+          </ul>
+        </div>
+
+        <div class="Ability-Box">
+          <img class="Ability-img" src="Assets/Front.png" alt="" />
+          <h3>Front-End</h3>
+          <p class="Ability-Text">
+            Tecnologias que utilizo para criação de sistemas web
+          </p>
+          <ul>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+
+        <div class="Ability-Box">
+          <img class="Ability-img" src="Assets/End.png" alt="" />
+          <h3>Back-End</h3>
+          <p class="Ability-Text">
+            Controle de banco de dados e aplicações na nuvem
+          </p>
+          <ul>
+            <li>JavaScript</li>
+            <li>Node.Js</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="Title" id="section-portfolio">
+        <h1>
+          Portfólio de
+          <div class="Blue">projetos</div>
+        </h1>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
