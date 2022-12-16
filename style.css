@@ -1,28 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-.Blue {
-  color: rgb(48, 101, 216);
-}
+/* 
+##########################################
+Commom atributes
+*/
 
 h1 {
   font-size: 40px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   line-height: 46px;
   margin: 0px;
 }
 
+.blue-title {
+  color: rgb(0, 115, 177);
+}
+
 h2 {
   font-size: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   margin: 0px;
 }
+
 h3 {
   font-size: 22px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
+  color: rgb(0, 115, 177);
   margin: 0px;
-  color: rgb(48, 101, 216);
 }
+
+/* 
+##### Paragraphs #####
+*/
 
 p {
   font-size: 16px;
@@ -30,55 +41,43 @@ p {
   margin: 0px;
 }
 
-p.My-description {
-  margin: 16px 0px;
+p.link-p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  margin: 0px;
 }
 
-p.Ability-Text {
-  font-size: 14px;
-  text-align: center;
-  margin-top: 8px;
-  width: 200px;
-}
-
-a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-}
+/* 
+######################
+*/
 
 button {
-  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "JetBrains Mono", monospace;
 
-  background-color: rgb(48, 101, 216);
   color: white;
+  background-color: rgb(0, 115, 177);
 
   border: 0px;
   border-radius: 30px;
-
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-}
-
-img.Social-Icom {
-  width: 34px;
-  height: 34px;
-}
-
-img.Ability-img {
-  height: 70px;
-  width: 70px;
-  margin: 40px 0px 30px 0px;
+  padding: 10px 20px;
 }
 
 li {
-  font-family: "Open Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-weight: bold;
 }
+
+/* 
+##########################################
+Semantic Elements
+*/
 
 body {
   margin: 0px;
   height: 100vh;
   box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
 }
 
 header {
@@ -86,8 +85,26 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 60px 0px;
+  background-color: rgb(230, 230, 230);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   padding: 50px 0px;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(230, 230, 230);
+}
+
+/* 
+##########################################
+Sections on Header
+*/
+
+section.my-name {
+  margin: 0px;
 }
 
 menu {
@@ -98,13 +115,7 @@ menu {
   padding: 0px;
 }
 
-a.Menu-Link {
-  width: 100px;
-  margin: 0px 10px;
-  text-align: center;
-}
-
-section.Social-Icons {
+section.social-icons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,42 +123,98 @@ section.Social-Icons {
   width: 140px;
 }
 
-section.Title {
-  margin: 50px;
+.menu-link {
+  width: 100px;
+  margin: 0px 10px;
   text-align: center;
 }
 
-section.My-Presentation {
+img.social-icon {
+  width: 34px;
+  height: 34px;
+}
+
+/* 
+##########################################
+Sections on Main
+*/
+
+section.title {
+  padding: 150px 0px 20px 0px;
+  text-align: center;
+}
+
+section.my-presentation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  margin-top: 50px;
+  margin-top: 150px;
+  margin-bottom: 60px;
 }
 
-div.My-Infos {
+section.my-abilities {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+section.my-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+section.my-experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section.can-i-help-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+/* 
+##########################################
+Elements on my-description section
+*/
+
+.presentation-box {
   align-items: left;
   height: 300px;
   width: 500px;
   margin-right: 50px;
 }
 
-img.My-Image {
+.my-description {
+  margin: 16px 0px;
+}
+
+img.my-image {
   height: 400px;
   width: 400px;
-  border: 5px solid rgb(48, 101, 216);
+  border: 5px solid rgb(0, 115, 177);
   border-radius: 50px;
 }
 
-.My-Abilities {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+/* 
+##########################################
+Elements on my-abilities section
+*/
 
-.Ability-Box {
+.ability-Box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -159,10 +226,155 @@ img.My-Image {
   border: 0.5px solid rgb(221, 221, 221);
   border-radius: 30px;
 
-  margin: 0px 15px;
+  margin: 0px 16px;
 }
 
-ul {
+img.ability-img {
+  height: 70px;
+  width: 70px;
+  margin: 40px 0px 30px 0px;
+}
+
+.ability-text {
+  text-align: center;
+  margin-top: 8px;
+  width: 200px;
+}
+
+ul.abilities-list {
   margin: 30px 0px 0px 0px;
   width: 90%;
+}
+
+/* 
+##########################################
+Elements on my-projects section
+*/
+
+.projects-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 250px;
+
+  border: 0.5px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 16px;
+  padding: 16px;
+}
+
+.project-image {
+  height: 200px;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.project-title {
+  margin: 16px 0px 4px 0px;
+}
+
+.project-paragraph {
+  margin: 0px 0px;
+  font-size: 14px;
+  text-align: center;
+}
+
+img.project-icon {
+  margin: 15px 0px 0px 0px;
+  width: 24px;
+  height: 24px;
+}
+
+/* 
+##########################################
+Elements on my-experiences section
+*/
+
+.experience-box {
+  width: 600px;
+
+  border: 0.5px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 16px;
+  padding: 16px;
+}
+
+.experience-time {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.experience-paragraph {
+  margin-top: 8px;
+}
+
+/* 
+##########################################
+Elements on can-i-hel-you section
+*/
+
+.adress-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.adress-contact {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px 8px;
+}
+.adress-icon {
+  height: 16px;
+  margin: 0px 8px;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation: fadeIn 3s ease-in-out;
+  -moz-animation: fadeIn 3s ease-in-out;
+  -o-animation: fadeIn 3s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
 }

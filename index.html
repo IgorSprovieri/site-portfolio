@@ -9,67 +9,78 @@
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
   </head>
-  <body>
+  <body class="fadeIn">
     <header>
-      <h2>Igor Sprovieri</h2>
+      <section class="my-name">
+        <h2>Igor Sprovieri</h2>
+      </section>
       <menu>
-        <a onclick="scrollPageTo('section-abilities')" class="Menu-Link">
-          Habilidades</a
-        >
-        <a onclick="scrollPageTo('section-portfolio')" class="Menu-Link">
-          Portfólio</a
-        >
-        <a onclick="scrollPageTo('section-abilities')" class="Menu-Link">
-          Experiências</a
-        >
+        <div class="menu-link">
+          <a onclick="scrollPageTo('section-abilities')">
+            <p class="link-p">Habilidades</p></a
+          >
+        </div>
+        <div class="menu-link">
+          <a onclick="scrollPageTo('section-portfolio')">
+            <p class="link-p">Portfólio</p></a
+          >
+        </div>
+        <div class="menu-link">
+          <a onclick="scrollPageTo('section-experiences')">
+            <p class="link-p">Experiências</p></a
+          >
+        </div>
       </menu>
-      <section class="Social-Icons">
+      <section class="social-icons">
         <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-          <img class="Social-Icom" src="Assets/Github.png" alt="Meu GitHub" />
+          <img class="social-icon" src="Assets/Github.png" alt="Meu GitHub" />
         </a>
         <a
           onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
         >
-          <img class="Social-Icom" src="Assets/Linkedin.png" alt="" />
+          <img class="social-icon" src="Assets/Linkedin.png" alt="" />
         </a>
         <a onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')">
-          <img class="Social-Icom" src="Assets/Instagram.png" alt="" />
+          <img class="social-icon" src="Assets/Instagram.png" alt="" />
         </a>
       </section>
     </header>
     <main>
-      <section class="My-Presentation">
-        <div class="My-Infos">
-          <h1>
-            Olá, Muito prazer!<br />
-            Sou o Igor Sprovieri
-          </h1>
-          <p class="My-description">
-            Programador desde 2013, atuei em 16 projetos como desenvolvedor
-            Unity, abri meu estúdio de jogos e fui redator por mais de um ano do
-            site crieseusjogos.com. Atualmente tenho foco em atuar como
-            desenvolvedor web e mobile.
-          </p>
-          <button>ENTRAR EM CONTATO</button>
+      <section class="my-presentation">
+        <div class="presentation-box">
+          <h1 id="TypeWriter">Olá, Muito prazer! Sou o Igor Sprovieri</h1>
+          <div class="my-description">
+            <p>
+              Programador desde 2013, atuei em 16 projetos como desenvolvedor
+              Unity, abri meu estúdio de jogos e fui redator por mais de um ano
+              do site crieseusjogos.com. Atualmente tenho foco em atuar como
+              desenvolvedor web full stack.
+            </p>
+          </div>
+          <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
+            <button>ENTRAR EM CONTATO</button></a
+          >
         </div>
-        <img class="My-Image" src="Assets/My Photo.jpg" alt="" />
+        <img class="my-image" src="Assets/My Photo.jpg" alt="" />
       </section>
 
-      <section class="Title" id="section-abilities">
+      <section class="title" id="section-abilities">
         <h1>
-          Habilidades que
-          <div class="Blue">domino</div>
+          {Habilidades que
+          <div class="blue-title">domino}</div>
         </h1>
       </section>
 
-      <section class="My-Abilities">
-        <div class="Ability-Box">
-          <img class="Ability-img" src="Assets/General.png" alt="" />
+      <section class="my-abilities">
+        <div class="ability-Box">
+          <img class="ability-img" src="Assets/General.png" alt="" />
           <h3>Habilidades Gerais</h3>
-          <p class="Ability-Text">
-            Tecnologias que utilizo no dia a dia da programação
-          </p>
-          <ul>
+          <div class="ability-text">
+            <p style="font-size: 14px">
+              Tecnologias que utilizo no dia a dia da programação
+            </p>
+          </div>
+          <ul class="abilities-list">
             <li>Git</li>
             <li>GitHub</li>
             <li>Docker</li>
@@ -77,39 +88,191 @@
           </ul>
         </div>
 
-        <div class="Ability-Box">
-          <img class="Ability-img" src="Assets/Front.png" alt="" />
+        <div class="ability-Box">
+          <img class="ability-img" src="Assets/Front.png" alt="" />
           <h3>Front-End</h3>
-          <p class="Ability-Text">
-            Tecnologias que utilizo para criação de sistemas web
-          </p>
-          <ul>
+          <div class="ability-text">
+            <p style="font-size: 14px">
+              Tecnologias que utilizo para criação de sistemas web
+            </p>
+          </div>
+          <ul class="abilities-list">
             <li>JavaScript</li>
             <li>HTML</li>
             <li>CSS</li>
           </ul>
         </div>
 
-        <div class="Ability-Box">
-          <img class="Ability-img" src="Assets/End.png" alt="" />
+        <div class="ability-Box">
+          <img class="ability-img" src="Assets/End.png" alt="" />
           <h3>Back-End</h3>
-          <p class="Ability-Text">
-            Controle de banco de dados e aplicações na nuvem
-          </p>
-          <ul>
+          <div class="ability-text">
+            <p style="font-size: 14px">
+              Controle de banco de dados e aplicações na nuvem
+            </p>
+          </div>
+          <ul class="abilities-list">
             <li>JavaScript</li>
             <li>Node.Js</li>
+            <li>PostGres</li>
           </ul>
         </div>
       </section>
 
-      <section class="Title" id="section-portfolio">
+      <section class="title" id="section-portfolio">
         <h1>
-          Portfólio de
-          <div class="Blue">projetos</div>
+          {Portfólio de
+          <div class="blue-title">projetos}</div>
         </h1>
       </section>
+
+      <section class="my-projects">
+        <div class="projects-line">
+          <div class="project-box">
+            <img class="project-image" src="" alt="" />
+            <h3 class="project-title">Site Portfólio</h3>
+            <p class="project-paragraph">
+              Meu site de portfólio montado com Html, CSS e JS
+            </p>
+            <a
+              onclick="openNewTab('https://github.com/IgorSprovieri/site-portfolio')"
+            >
+              <img
+                class="project-icon"
+                src="Assets/Github.png"
+                alt="Meu GitHub"
+              />
+            </a>
+          </div>
+          <div class="project-box">
+            <img class="project-image" src="" alt="" />
+            <h3 class="project-title">API de finanças</h3>
+            <p class="project-paragraph">
+              API de finanças pessoais montada com Node.js e PostGres
+            </p>
+            <a
+              onclick="openNewTab('https://github.com/IgorSprovieri/wallet-app-API')"
+            >
+              <img
+                class="project-icon"
+                src="Assets/Github.png"
+                alt="Meu GitHub"
+              />
+            </a>
+          </div>
+          <div class="project-box">
+            <img class="project-image" src="" alt="" />
+            <h3 class="project-title">My Unity Blog</h3>
+            <p class="project-paragraph">
+              Blog montado com JS, HTML, CSS, Node.js e PostGres
+            </p>
+            <a
+              onclick="openNewTab('https://github.com/IgorSprovieri/My-Unity-Blog')"
+            >
+              <img
+                class="project-icon"
+                src="Assets/Github.png"
+                alt="Meu GitHub"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="title" id="section-experiences">
+        <h1>
+          {Minhas
+          <div class="blue-title">Experiências}</div>
+        </h1>
+      </section>
+
+      <section class="my-experiences">
+        <div class="experience-box">
+          <h3 class="experience-title">Afil Games</h3>
+          <p class="experience-time">JULHO 2022 - NOVEMBRO 2022</p>
+          <p class="experience-paragraph">
+            Atuei como desenvolvedor Unity em 2 jogos da empresa que foram
+            publicados na Steam e Nintendo Switch
+          </p>
+        </div>
+        <div class="experience-box">
+          <h3 class="experience-title">DejaVú Games</h3>
+          <p class="experience-time">MARÇO 2022 - MAIO 2022</p>
+          <p class="experience-paragraph">
+            Atuei como desenvolvedor Unity em 1 jogo publicado na Steam
+          </p>
+        </div>
+        <div class="experience-box">
+          <h3 class="experience-title">Sprovieri Games</h3>
+          <p class="experience-time">JANEIRO 2021 - AGOSTO 2022</p>
+          <p class="experience-paragraph">
+            Montei um estúdio de jogos onde, em conjunto com profissionais de
+            outras áreas, desenvolvemos 12 jogos para a Steam
+          </p>
+        </div>
+        <div class="experience-box">
+          <h3 class="experience-title">Crie Seus Jogos</h3>
+          <p class="experience-time">JUNHO 2020 - SETEMBRO 2021</p>
+          <p class="experience-paragraph">
+            Redatei artigos semanais sobre programação de jogos no site
+            crieseusjogos.com. Também ajudei no suporte dos alunos de
+            programação no curso da empresa.
+          </p>
+        </div>
+        <div class="experience-box">
+          <h3 class="experience-title">Pinel Games</h3>
+          <p class="experience-time">SETEMBRO 2020 - DEZEMBRO 2020</p>
+          <p class="experience-paragraph">
+            Atuei como desenvolvedor Unity em 2 jogos da empresa, corrigindo
+            bugs e desenvolvendo as principais mecânicas
+          </p>
+        </div>
+      </section>
+      <section class="title">
+        <h1>
+          {Como posso
+          <div class="blue-title">Te ajudar?}</div>
+        </h1>
+      </section>
+      <section class="can-i-help-you">
+        <p>Estou a disposição para ajudar no seu projeto ou na sua empresa</p>
+        <address>
+          <a onclick="openNewTab('mailto:igsp1@hotmail.com')">
+            <div class="adress-box">
+              <img class="adress-icon" src="Assets/email.png" alt="Meu Email" />
+              <p class="adress-contact">igsp1@hotmail.com</p>
+            </div>
+          </a>
+          <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
+            <div class="adress-box">
+              <img
+                class="adress-icon"
+                src="Assets/phone.png"
+                alt="Meu Telefone/Whatsapp"
+              />
+              <p class="adress-contact">+55 11 99761 2295</p>
+            </div>
+          </a>
+        </address>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="my-name">
+        <h2>Igor Sprovieri</h2>
+      </section>
+      <section class="social-icons">
+        <a onclick="openNewTab('https://github.com/IgorSprovieri')">
+          <img class="social-icon" src="Assets/Github.png" alt="Meu GitHub" />
+        </a>
+        <a
+          onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
+        >
+          <img class="social-icon" src="Assets/Linkedin.png" alt="" />
+        </a>
+        <a onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')">
+          <img class="social-icon" src="Assets/Instagram.png" alt="" />
+        </a>
+      </section>
+    </footer>
   </body>
 </html>
