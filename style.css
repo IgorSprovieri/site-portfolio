@@ -159,7 +159,7 @@ section.my-abilities {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 }
 
 section.my-projects {
@@ -167,7 +167,6 @@ section.my-projects {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 130px;
 }
 
 section.my-experiences {
@@ -251,6 +250,10 @@ ul.abilities-list {
 Elements on my-projects section
 */
 
+.title-portfolio {
+  padding: 80px 0px 20px 0px;
+  text-align: center;
+}
 .projects-line {
   display: flex;
   flex-direction: row;
@@ -273,10 +276,11 @@ Elements on my-projects section
   padding: 16px;
 }
 
-.project-image {
-  height: 200px;
+img.project-image {
+  height: 120px;
   width: 100%;
   border-radius: 30px;
+  border: 2px solid rgb(0, 115, 177);
 }
 
 .project-title {
