@@ -47,6 +47,10 @@ p.link-p {
   margin: 0px;
 }
 
+p.ability-description {
+  font-size: 14px;
+}
+
 /* 
 ######################
 */
@@ -344,6 +348,12 @@ Elements on can-i-hel-you section
   height: 16px;
   margin: 0px 8px;
 }
+
+/* 
+##########################################
+Fade In
+*/
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -368,6 +378,7 @@ Elements on can-i-hel-you section
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -381,4 +392,372 @@ Elements on can-i-hel-you section
   -moz-animation: fadeIn 3s ease-in-out;
   -o-animation: fadeIn 3s ease-in-out;
   animation: fadeIn 3s ease-in-out;
+}
+
+/* 
+##########################################
+Media Query
+*/
+
+@media only screen and (max-device-width: 450px) {
+  /* 
+##########################################
+Commom atributes
+*/
+
+  h1 {
+    font-size: 32px;
+    font-family: "JetBrains Mono", monospace;
+    line-height: 40px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .blue-title {
+    color: rgb(0, 115, 177);
+  }
+
+  h2 {
+    font-size: 14px;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0px;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    color: rgb(0, 115, 177);
+    margin: 0px;
+  }
+
+  /* 
+##### Paragraphs #####
+*/
+
+  p {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    margin: 0px;
+  }
+
+  p.link-p {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    margin: 0px;
+  }
+
+  p.ability-description {
+    font-size: 14px;
+  }
+
+  /* 
+######################
+*/
+
+  button {
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+
+    color: white;
+    background-color: rgb(0, 115, 177);
+
+    border: 0px;
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+
+  li {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+  }
+
+  /* 
+##########################################
+Semantic Elements
+*/
+
+  body {
+    margin: 0px;
+    height: 100vh;
+    width: 140vw;
+    box-sizing: border-box;
+    background-color: rgb(250, 250, 250);
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 8px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0px;
+    background-color: rgb(230, 230, 230);
+  }
+
+  /* 
+##########################################
+Sections on Header
+*/
+
+  section.my-name {
+    margin: 0px;
+    width: 70px;
+  }
+
+  menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  section.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+  }
+
+  .menu-link {
+    width: 60px;
+    margin: 0px 8px;
+    text-align: center;
+  }
+
+  img.social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 
+##########################################
+Sections on Main
+*/
+
+  section.title {
+    padding: 32px 0px 16px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  section.my-presentation {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  section.my-abilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  section.my-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  section.my-experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  section.can-i-help-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  /* 
+##########################################
+Elements on my-description section
+*/
+
+  .presentation-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 400px;
+    margin-top: 16px;
+  }
+
+  .my-description {
+    margin: 16px 0px;
+    text-align: center;
+  }
+
+  img.my-image {
+    height: 200px;
+    width: 200px;
+    border: 5px solid rgb(0, 115, 177);
+    border-radius: 30px;
+  }
+
+  /* 
+##########################################
+Elements on my-abilities section
+*/
+
+  .ability-Box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 400px;
+    width: 140px;
+
+    border: 0.5px solid rgb(221, 221, 221);
+    border-radius: 20px;
+
+    margin: 0px 8px;
+    padding: 0px 8px;
+  }
+
+  img.ability-img {
+    height: 50px;
+    width: 50px;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .ability-title {
+    height: 50px;
+  }
+
+  .ability-text {
+    text-align: center;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  ul.abilities-list {
+    margin: 30px 0px 0px 0px;
+    width: 90%;
+  }
+
+  /* 
+##########################################
+Elements on my-projects section
+*/
+
+  .title-portfolio {
+    padding: 80px 0px 20px 0px;
+    text-align: center;
+  }
+  .projects-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 250px;
+
+    border: 0.5px solid rgb(221, 221, 221);
+    border-radius: 30px;
+
+    margin: 16px;
+    padding: 16px;
+  }
+
+  img.project-image {
+    height: 120px;
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 115, 177);
+  }
+
+  .project-title {
+    margin: 16px 0px 4px 0px;
+  }
+
+  .project-paragraph {
+    margin: 0px 0px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  img.project-icon {
+    margin: 15px 0px 0px 0px;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* 
+##########################################
+Elements on my-experiences section
+*/
+
+  .experience-box {
+    width: 400px;
+
+    border: 0.5px solid rgb(221, 221, 221);
+    border-radius: 30px;
+
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .experience-time {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .experience-paragraph {
+    margin-top: 8px;
+  }
+
+  /* 
+##########################################
+Elements on can-i-hel-you section
+*/
+
+  .adress-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+  }
+  .adress-contact {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px 8px;
+  }
+  .adress-icon {
+    height: 16px;
+    margin: 0px 8px;
+  }
 }
