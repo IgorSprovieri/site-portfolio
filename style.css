@@ -436,7 +436,7 @@ Commom atributes
 */
 
   p {
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Open Sans", sans-serif;
     margin: 0px;
   }
@@ -603,8 +603,8 @@ Elements on my-description section
     justify-content: flex-start;
     align-items: center;
     height: 100%;
-    width: 400px;
-    margin-top: 16px;
+    width: 420px;
+    margin: 16px;
   }
 
   .my-description {
