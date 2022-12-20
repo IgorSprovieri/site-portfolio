@@ -2,6 +2,10 @@
 
 This project is a website builded from HTML, CSS and JS to show my portfolio and my experiences.
 
+# Preview
+
+<img src="https://github.com/IgorSprovieri/site-portfolio/blob/main/Assets/Preview.png" heigth="500" />
+
 ## Visit
 
 https://igorsprovieri.github.io/site-portfolio/
