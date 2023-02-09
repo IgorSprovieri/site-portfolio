@@ -11,39 +11,28 @@
   </head>
   <body class="fadeIn">
     <header>
-      <section class="my-name">
-        <h2>Igor Sprovieri</h2>
-      </section>
-      <menu>
-        <div class="menu-link">
+      <menu class="desktop-menu">
+        <div class="menu-button" hidden>
+          <a onclick="scrollPageTo('section-blog')">
+            <p class="link-p">Blog</p></a
+          >
+        </div>
+        <div class="menu-button">
           <a onclick="scrollPageTo('section-abilities')">
             <p class="link-p">Habilidades</p></a
           >
         </div>
-        <div class="menu-link">
+        <div class="menu-button">
           <a onclick="scrollPageTo('section-portfolio')">
             <p class="link-p">Portfólio</p></a
           >
         </div>
-        <div class="menu-link">
+        <div class="menu-button">
           <a onclick="scrollPageTo('section-experiences')">
             <p class="link-p">Experiências</p></a
           >
         </div>
       </menu>
-      <section class="social-icons">
-        <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-          <img class="social-icon" src="Assets/Github.png" alt="Meu GitHub" />
-        </a>
-        <a
-          onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
-        >
-          <img class="social-icon" src="Assets/Linkedin.png" alt="" />
-        </a>
-        <a onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')">
-          <img class="social-icon" src="Assets/Instagram.png" alt="" />
-        </a>
-      </section>
     </header>
     <main>
       <section class="my-presentation">
@@ -56,13 +45,32 @@
               Programador desde 2013, atuei em 16 projetos como desenvolvedor
               Unity C#, abri meu estúdio de jogos e fui tutor e redator da
               empresa Crie Seus Jogos. Desde 2022 comecei a estudar
-              desenvolvimento web fullstack com JS, que é onde tenho foco em
-              atuar de agora em diante.
+              desenvolvimento web fullstack com JavaScript, que é onde tenho
+              foco em atuar de agora em diante.
             </p>
           </div>
           <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
             <button>ENTRAR EM CONTATO</button></a
           >
+          <section class="social-icons">
+            <a onclick="openNewTab('https://github.com/IgorSprovieri')">
+              <img
+                class="social-icon"
+                src="Assets/Github.png"
+                alt="Meu GitHub"
+              />
+            </a>
+            <a
+              onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
+            >
+              <img class="social-icon" src="Assets/Linkedin.png" alt="" />
+            </a>
+            <a
+              onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')"
+            >
+              <img class="social-icon" src="Assets/Instagram.png" alt="" />
+            </a>
+          </section>
         </div>
         <img class="my-image" src="Assets/My Photo.jpg" alt="" />
       </section>
@@ -280,6 +288,14 @@
       </section>
 
       <section class="my-experiences">
+        <div class="experience-box">
+          <h3 class="experience-title">Auto Posto Canindé</h3>
+          <p class="experience-time">SETEMBRO 2022</p>
+          <p class="experience-paragraph">
+            Atuo na administração e desenvolvo sistemas web com react, node,
+            express e mongoose para otimizar processos dentro da empresa
+          </p>
+        </div>
         <div class="experience-box">
           <h3 class="experience-title">Afil Games</h3>
           <p class="experience-time">JULHO 2022 - AGOSTO 2022</p>

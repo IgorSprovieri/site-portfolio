@@ -59,12 +59,51 @@ button {
   font-size: 16px;
   font-family: "JetBrains Mono", monospace;
 
-  color: white;
+  color: rgb(250, 250, 250);
   background-color: rgb(0, 115, 177);
 
   border: 0px;
   border-radius: 30px;
   padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  animation-name: onHoverButton;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+button:not(hover) {
+  animation-name: outHoverButton;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes onHoverButton {
+  0% {
+    background-color: rgb(0, 115, 177);
+    color: rgb(250, 250, 250);
+    border: 0px;
+  }
+  100% {
+    background-color: rgb(250, 250, 250);
+    color: rgb(0, 115, 177);
+    border: 2px solid rgb(0, 115, 177);
+  }
+}
+
+@keyframes outHoverButton {
+  0% {
+    background-color: rgb(250, 250, 250);
+    color: rgb(0, 115, 177);
+    border: 2px solid rgb(0, 115, 177);
+  }
+  100% {
+    background-color: rgb(0, 115, 177);
+    color: rgb(250, 250, 250);
+    border: 0px;
+  }
 }
 
 li {
@@ -79,6 +118,7 @@ Semantic Elements
 
 body {
   margin: 0px;
+  padding: 0px;
   height: 100vh;
   box-sizing: border-box;
   background-color: rgb(250, 250, 250);
@@ -87,9 +127,9 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  padding: 60px 0px;
+  justify-content: center;
+  padding: 30px 0px;
   background-color: rgb(230, 230, 230);
 }
 
@@ -107,35 +147,47 @@ footer {
 Sections on Header
 */
 
-section.my-name {
-  margin: 0px;
-}
-
 menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-}
-
-section.social-icons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 140px;
+  padding: 0px;
+  width: 500px;
 }
 
-.menu-link {
-  width: 100px;
-  margin: 0px 10px;
-  text-align: center;
+.menu-button {
+  cursor: pointer;
 }
 
-img.social-icon {
-  width: 34px;
-  height: 34px;
+.menu-button:hover {
+  animation-name: onHoverMenuButton;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.menu-button:not(hover) {
+  animation-name: outHoverMenuButton;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes onHoverMenuButton {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes outHoverMenuButton {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* 
@@ -154,8 +206,8 @@ section.my-presentation {
   justify-content: center;
   align-items: center;
 
-  margin-top: 150px;
-  margin-bottom: 60px;
+  margin-top: 90px;
+  margin-bottom: 40px;
 }
 
 section.my-abilities {
@@ -163,7 +215,6 @@ section.my-abilities {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 90px;
 }
 
 section.my-projects {
@@ -185,7 +236,6 @@ section.can-i-help-you {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
   padding-bottom: 50px;
 }
 
@@ -196,7 +246,7 @@ Elements on my-description section
 
 .presentation-box {
   align-items: left;
-  height: 300px;
+  height: 326px;
   width: 500px;
   margin-right: 50px;
 }
@@ -205,9 +255,25 @@ Elements on my-description section
   margin: 16px 0px;
 }
 
+section.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  margin-top: 16px;
+  margin-left: 28px;
+}
+
+img.social-icon {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
 img.my-image {
-  height: 400px;
-  width: 400px;
+  height: 380px;
+  width: 380px;
   border: 5px solid rgb(0, 115, 177);
   border-radius: 50px;
 }
@@ -230,10 +296,12 @@ Elements on my-abilities section
   height: 500px;
   width: 250px;
 
-  border: 0.5px solid rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 30px;
 
   margin: 0px 16px;
+
+  background-color: rgb(255, 255, 255);
 }
 
 img.ability-img {
@@ -277,11 +345,12 @@ Elements on my-projects section
 
   width: 250px;
 
-  border: 0.5px solid rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 30px;
 
   margin: 16px;
   padding: 16px;
+  background-color: rgb(255, 255, 255);
 }
 
 img.project-image {
@@ -302,9 +371,10 @@ img.project-image {
 }
 
 img.project-icon {
-  margin: 15px 0px 0px 0px;
+  margin: 15px 4px 0px 4px;
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 /* 
@@ -315,11 +385,12 @@ Elements on my-experiences section
 .experience-box {
   width: 600px;
 
-  border: 0.5px solid rgb(221, 221, 221);
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 30px;
 
   margin: 16px;
   padding: 16px;
+  background-color: rgb(255, 255, 255);
 }
 
 .experience-time {
@@ -344,10 +415,12 @@ Elements on can-i-hel-you section
   align-items: center;
   margin-top: 32px;
 }
+
 .adress-contact {
   font-family: "Montserrat", sans-serif;
   margin: 0px 8px;
 }
+
 .adress-icon {
   height: 16px;
   margin: 0px 8px;
@@ -357,30 +430,8 @@ Elements on can-i-hel-you section
 ##########################################
 Fade In
 */
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.fadeIn {
+  animation: fadeIn 1.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -391,377 +442,113 @@ Fade In
     opacity: 1;
   }
 }
-.fadeIn {
-  -webkit-animation: fadeIn 3s ease-in-out;
-  -moz-animation: fadeIn 3s ease-in-out;
-  -o-animation: fadeIn 3s ease-in-out;
-  animation: fadeIn 3s ease-in-out;
-}
 
 /* 
 ##########################################
 Media Query
 */
-
 @media only screen and (max-device-width: 450px) {
-  /* 
-##########################################
-Commom atributes
-*/
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+  }
 
   h1 {
-    font-size: 32px;
-    font-family: "JetBrains Mono", monospace;
+    font-size: 30px;
     line-height: 40px;
-    margin: 0px;
-    text-align: center;
-  }
-
-  .blue-title {
-    color: rgb(0, 115, 177);
-  }
-
-  h2 {
-    font-size: 14px;
-    font-family: "JetBrains Mono", monospace;
-    margin: 0px;
-  }
-
-  h3 {
-    font-size: 18px;
-    text-align: center;
-    font-family: "JetBrains Mono", monospace;
-    color: rgb(0, 115, 177);
-    margin: 0px;
-  }
-
-  /* 
-##### Paragraphs #####
-*/
-
-  p {
-    font-size: 18px;
-    font-family: "Open Sans", sans-serif;
-    margin: 0px;
-  }
-
-  p.link-p {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 10px;
-    margin: 0px;
-  }
-
-  p.ability-description {
-    font-size: 14px;
-  }
-
-  /* 
-######################
-*/
-
-  button {
-    font-size: 16px;
-    font-family: "JetBrains Mono", monospace;
-
-    color: white;
-    background-color: rgb(0, 115, 177);
-
-    border: 0px;
-    border-radius: 30px;
-    padding: 10px 20px;
-  }
-
-  li {
-    font-family: "JetBrains Mono", monospace;
-    font-weight: bold;
-  }
-
-  /* 
-##########################################
-Semantic Elements
-*/
-
-  body {
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    background-color: rgb(250, 250, 250);
-  }
-
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 8px;
-    background-color: rgb(230, 230, 230);
-  }
-
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 0px;
-    background-color: rgb(230, 230, 230);
-  }
-
-  /* 
-##########################################
-Sections on Header
-*/
-
-  section.my-name {
-    margin: 0px;
-    width: 70px;
-  }
-
-  menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-  }
-
-  section.social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100px;
-  }
-
-  .menu-link {
-    width: 60px;
-    margin: 0px 8px;
-    text-align: center;
-  }
-
-  img.social-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  /* 
-##########################################
-Sections on Main
-*/
-
-  section.title {
-    padding: 32px 0px 16px 0px;
-    text-align: center;
-    width: 100%;
   }
 
   section.my-presentation {
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
-
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 50px;
+    margin-bottom: 0px;
   }
 
-  section.my-abilities {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
+  img.my-image {
+    width: 200px;
+    height: 200px;
   }
-
-  section.my-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  section.my-experiences {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  section.can-i-help-you {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 50px;
-  }
-
-  /* 
-##########################################
-Elements on my-description section
-*/
 
   .presentation-box {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    width: 420px;
-    margin: 16px;
-  }
-
-  .my-description {
-    margin: 16px 0px;
+    margin: 0px;
+    margin-top: 16px;
+    width: 94vw;
     text-align: center;
+    height: 340px;
   }
 
-  img.my-image {
-    height: 200px;
-    width: 200px;
-    border: 5px solid rgb(0, 115, 177);
-    border-radius: 30px;
+  section.social-icons {
+    margin-left: 0px;
   }
-
-  /* 
-##########################################
-Elements on my-abilities section
-*/
 
   .ability-Box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    width: 124px;
+    margin: 4px;
+    border-radius: 14px;
 
-    height: 400px;
-    width: 140px;
-
-    border: 0.5px solid rgb(221, 221, 221);
-    border-radius: 20px;
-
-    margin: 0px 8px;
-    padding: 0px 8px;
+    height: 384px;
   }
 
   img.ability-img {
-    height: 50px;
-    width: 50px;
-    margin: 20px 0px 20px 0px;
+    height: 40px;
+    width: 40px;
+    margin: 16px;
   }
 
-  .ability-title {
-    height: 50px;
+  h3.ability-title {
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
   }
 
   .ability-text {
-    text-align: center;
-    margin-top: 8px;
-    width: 100%;
+    width: 96%;
+    height: 36px;
+  }
+
+  p.ability-description {
+    font-size: 12px;
   }
 
   ul.abilities-list {
-    margin: 30px 0px 0px 0px;
-    width: 90%;
+    width: 96%;
+    padding: 0px;
   }
 
-  /* 
-##########################################
-Elements on my-projects section
-*/
-
-  .title-portfolio {
-    padding: 80px 0px 20px 0px;
-    text-align: center;
-  }
-  .projects-line {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .project-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    width: 250px;
-
-    border: 0.5px solid rgb(221, 221, 221);
-    border-radius: 20px;
-
-    margin: 16px;
-    padding: 16px;
-  }
-
-  img.project-image {
-    height: 120px;
-    width: 100%;
-    border-radius: 30px;
-    border: 2px solid rgb(0, 115, 177);
-  }
-
-  .project-title {
-    margin: 16px 0px 4px 0px;
-  }
-
-  .project-paragraph {
-    margin: 0px 0px;
+  li {
     font-size: 14px;
-    text-align: center;
+    margin-left: 20px;
   }
 
-  img.project-icon {
-    margin: 15px 0px 0px 0px;
-    width: 24px;
-    height: 24px;
+  .projects-line {
+    flex-direction: column;
   }
-
-  /* 
-##########################################
-Elements on my-experiences section
-*/
 
   .experience-box {
-    width: 400px;
-
-    border: 0.5px solid rgb(221, 221, 221);
-    border-radius: 30px;
-
-    margin: 16px;
-    padding: 16px;
+    width: 80%;
+    border-radius: 24px;
   }
 
-  .experience-time {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    margin-top: 4px;
+  section.can-i-help-you p {
+    width: 90%;
+    text-align: center;
   }
 
-  .experience-paragraph {
-    margin-top: 8px;
+  .my-name {
+    margin-bottom: 22px;
   }
 
-  /* 
-##########################################
-Elements on can-i-hel-you section
-*/
+  .my-name h2 {
+    font-size: 32px;
+  }
 
-  .adress-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 32px;
-  }
-  .adress-contact {
-    font-family: "Montserrat", sans-serif;
-    margin: 0px 8px;
-  }
-  .adress-icon {
-    height: 16px;
-    margin: 0px 8px;
+  footer {
+    flex-direction: column;
+    padding: 70px 0px;
   }
 }
