@@ -9,148 +9,161 @@
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
   </head>
-  <body class="fadeIn">
-    <header>
-      <menu class="desktop-menu">
-        <div class="menu-button" hidden>
+  <body class="c-body">
+    <header class="c-header">
+      <menu class="c-menu">
+        <button class="c-button isHidden">
           <a onclick="scrollPageTo('section-blog')">
             <p class="link-p">Blog</p></a
           >
-        </div>
-        <div class="menu-button">
-          <a onclick="scrollPageTo('section-abilities')">
-            <p class="link-p">Habilidades</p></a
-          >
-        </div>
-        <div class="menu-button">
-          <a onclick="scrollPageTo('section-portfolio')">
-            <p class="link-p">Portfólio</p></a
-          >
-        </div>
-        <div class="menu-button">
-          <a onclick="scrollPageTo('section-experiences')">
-            <p class="link-p">Experiências</p></a
-          >
-        </div>
+        </button>
+        <button class="c-button" onclick="scrollPageTo('section-abilities')">
+          Habilidades
+        </button>
+        <button class="c-button" onclick="scrollPageTo('section-portfolio')">
+          Portfólio
+        </button>
+        <button class="c-button" onclick="scrollPageTo('section-experiences')">
+          Experiências
+        </button>
       </menu>
     </header>
-    <main>
-      <section class="my-presentation">
-        <div class="presentation-box">
-          <h1 id="TypeWriter" class="TypeWriter">
-            Olá, Muito prazer! Sou o Igor Sprovieri
-          </h1>
-          <div class="my-description">
-            <p>
+    <main class="c-main">
+      <section class="c-section">
+        <div class="c-section__container">
+          <div class="c-my-description">
+            <h1 id="TypeWriter" class="c-h1 c-h1--type-witter">
+              Olá, Muito prazer! Sou o Igor Sprovieri
+            </h1>
+            <p class="c-p">
               Programador desde 2013, atuei em 16 projetos como desenvolvedor
               Unity C#, abri meu estúdio de jogos e fui tutor e redator da
               empresa Crie Seus Jogos. Desde 2022 comecei a estudar
               desenvolvimento web fullstack com JavaScript, que é onde tenho
               foco em atuar de agora em diante.
             </p>
+            <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
+              <button class="c-button">ENTRAR EM CONTATO</button></a
+            >
+            <div class="c-social-icons">
+              <a onclick="openNewTab('https://github.com/IgorSprovieri')">
+                <img
+                  class="c-social-icons__image"
+                  src="Assets/Github.png"
+                  alt="Meu GitHub"
+                />
+              </a>
+              <a
+                onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
+              >
+                <img
+                  class="c-social-icons__image"
+                  src="Assets/Linkedin.png"
+                  alt=""
+                />
+              </a>
+              <a
+                onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')"
+              >
+                <img
+                  class="c-social-icons__image"
+                  src="Assets/Instagram.png"
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
-          <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
-            <button>ENTRAR EM CONTATO</button></a
-          >
-          <section class="social-icons">
-            <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-              <img
-                class="social-icon"
-                src="Assets/Github.png"
-                alt="Meu GitHub"
-              />
-            </a>
-            <a
-              onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
-            >
-              <img class="social-icon" src="Assets/Linkedin.png" alt="" />
-            </a>
-            <a
-              onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')"
-            >
-              <img class="social-icon" src="Assets/Instagram.png" alt="" />
-            </a>
-          </section>
+          <img
+            class="c-my-image"
+            src="Assets/My Photo.jpg"
+            alt="Igor Sprovieri"
+          />
         </div>
-        <img class="my-image" src="Assets/My Photo.jpg" alt="" />
       </section>
 
-      <section class="title" id="section-abilities">
-        <h1>
+      <section class="c-title" id="section-abilities">
+        <h1 class="c-h1">
           {Habilidades que
-          <div class="blue-title">Domino}</div>
+          <h1 class="c-h1 isBlue">Domino}</h1>
         </h1>
       </section>
 
-      <section class="my-abilities">
-        <div class="ability-Box">
-          <img class="ability-img" src="Assets/General.png" alt="" />
-          <h3 class="ability-title">Habilidades Gerais</h3>
-          <div class="ability-text">
-            <p class="ability-description">
-              Tecnologias que utilizo no dia a dia da programação
-            </p>
+      <section class="c-section">
+        <div class="c-section__container c-section__container--stayOnMobile">
+          <div class="c-ability-box">
+            <img class="c-ability-box__image" src="Assets/General.png" alt="" />
+            <h3 class="c-h3 isBlue">Gerais</h3>
+            <div class="c-ability-box__description">
+              <p class="c-p c-p--little">
+                Tecnologias que utilizo no dia a dia da programação
+              </p>
+            </div>
+            <ul class="c-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VSCode</li>
+              <li>Docker</li>
+              <li>Insomnia</li>
+              <li>MongoDB Compass</li>
+              <li>PG Admin</li>
+            </ul>
           </div>
-          <ul class="abilities-list">
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>VSCode</li>
-            <li>Docker</li>
-            <li>Insomnia</li>
-            <li>MongoDB Compass</li>
-            <li>PG Admin</li>
-          </ul>
-        </div>
 
-        <div class="ability-Box">
-          <img class="ability-img" src="Assets/Front.png" alt="" />
-          <h3 class="ability-title">Front-End</h3>
-          <div class="ability-text">
-            <p class="ability-description">
-              Tecnologias que utilizo para criação de sistemas web
-            </p>
+          <div class="c-ability-box">
+            <img class="c-ability-box__image" src="Assets/Front.png" alt="" />
+            <h3 class="c-h3 isBlue">Front-End</h3>
+            <div class="c-ability-box__description">
+              <p class="c-p c-p--little">
+                Tecnologias que utilizo para criação de sistemas web
+              </p>
+            </div>
+            <ul class="c-list">
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>React.js</li>
+            </ul>
           </div>
-          <ul class="abilities-list">
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React.js</li>
-          </ul>
-        </div>
 
-        <div class="ability-Box">
-          <img class="ability-img" src="Assets/End.png" alt="" />
-          <h3 class="ability-title">Back-End</h3>
-          <div class="ability-text">
-            <p class="ability-description">
-              Controle de banco de dados e aplicações na nuvem
-            </p>
+          <div class="c-ability-box">
+            <img class="c-ability-box__image" src="Assets/End.png" alt="" />
+            <h3 class="c-h3 isBlue">Back-End</h3>
+            <div class="c-ability-box__description">
+              <p class="c-p c-p--little">
+                Controle de banco de dados e aplicações na nuvem
+              </p>
+            </div>
+            <ul class="c-list">
+              <li>Node.Js</li>
+              <li>Express.Js</li>
+              <li>PostGreSQL</li>
+              <li>MongoDB com Mongoose</li>
+              <li>Sequelize</li>
+              <li>Heroku</li>
+              <li>MongoDB Atlas</li>
+              <li>AWS</li>
+            </ul>
           </div>
-          <ul class="abilities-list">
-            <li>Node.Js</li>
-            <li>Express.Js</li>
-            <li>PostGreSQL</li>
-            <li>MongoDB com Mongoose</li>
-            <li>Sequelize</li>
-            <li>Heroku</li>
-            <li>MongoDB Atlas</li>
-            <li>AWS</li>
-          </ul>
         </div>
       </section>
 
-      <section class="my-projects" id="section-portfolio">
-        <div class="title-portfolio">
-          <h1>
-            {Portfólio de
-            <div class="blue-title">Projetos}</div>
-          </h1>
-        </div>
-        <div class="projects-line">
-          <div class="project-box">
-            <img class="project-image" src="Assets/weekly.png" alt="Weekly" />
-            <h3 class="project-title">Weekly</h3>
-            <p class="project-paragraph">
+      <section class="c-title" id="section-portfolio">
+        <h1 class="c-h1">
+          {Portfólio de
+          <h1 class="c-h1 isBlue">Projetos}</h1>
+        </h1>
+      </section>
+
+      <section class="c-section">
+        <div class="c-section__container">
+          <div class="c-project-box">
+            <img
+              class="c-project-box__image"
+              src="Assets/weekly.png"
+              alt="Weekly"
+            />
+            <h3 class="c-h3 isBlue">Weekly</h3>
+            <p class="c-p c-p--little">
               Weekly é um app de gerenciamento de tarefas feito HTML, CSS e JS
             </p>
             <div>
@@ -158,7 +171,7 @@
                 onclick="openNewTab('https://igorsprovieri.github.io/weekly-web/')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/link.svg"
                   alt="Link de Produção"
                 />
@@ -167,21 +180,21 @@
                 onclick="openNewTab('https://github.com/IgorSprovieri/weekly-web')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/Github.png"
                   alt="Meu GitHub"
                 />
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="c-project-box">
             <img
-              class="project-image"
+              class="c-project-box__image"
               src="Assets/Supermarket List.png"
               alt="Supermarket List"
             />
-            <h3 class="project-title">Supermarket List</h3>
-            <p class="project-paragraph">
+            <h3 class="c-h3 isBlue">Supermarket List</h3>
+            <p class="c-p c-p--little">
               App de lista de supermercado desenvolvido com react.js
             </p>
             <div>
@@ -189,7 +202,7 @@
                 onclick="openNewTab('https://supermarket-list-web-delta.vercel.app')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/link.svg"
                   alt="Meu GitHub"
                 />
@@ -198,7 +211,7 @@
                 onclick="openNewTab('https://github.com/IgorSprovieri/supermarket-list-web')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/Github.png"
                   alt="Meu GitHub"
                 />
@@ -206,17 +219,21 @@
             </div>
           </div>
         </div>
-        <div class="projects-line">
-          <div class="project-box">
-            <img class="project-image" src="Assets/weeklyAPI.svg" alt="" />
-            <h3 class="project-title">Weekly API</h3>
-            <p class="project-paragraph">
+        <div class="c-section__container">
+          <div class="c-project-box">
+            <img
+              class="c-project-box__image"
+              src="Assets/weeklyAPI.svg"
+              alt=""
+            />
+            <h3 class="c-h3 isBlue">Weekly API</h3>
+            <p class="c-p c-p--little">
               API de gerenciamento de tarefas feito com Node, Express e Mongoose
             </p>
             <div>
               <a onclick="openNewTab('https://weekly.herokuapp.com')">
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/link.svg"
                   alt="Meu GitHub"
                 />
@@ -225,21 +242,21 @@
                 onclick="openNewTab('https://github.com/IgorSprovieri/Weekly')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/Github.png"
                   alt="Meu GitHub"
                 />
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="c-project-box">
             <img
-              class="project-image"
+              class="c-project-box__image"
               src="Assets/supermarket-list-API.svg"
               alt=""
             />
-            <h3 class="project-title">Superm. List API</h3>
-            <p class="project-paragraph">
+            <h3 class="c-h3 isBlue">Superm. List API</h3>
+            <p class="c-p c-p--little">
               API de lista de supermercado feito com Node, Express e PostgreSQL
             </p>
             <div>
@@ -247,7 +264,7 @@
                 onclick="openNewTab('https://github.com/IgorSprovieri/supermarket-list-API')"
               >
                 <img
-                  class="project-icon"
+                  class="c-project-box__icon"
                   src="Assets/Github.png"
                   alt="Meu GitHub"
                 />
@@ -257,105 +274,127 @@
         </div>
       </section>
 
-      <section class="title" id="section-experiences">
-        <h1>
+      <section class="c-title" id="section-experiences">
+        <h1 class="c-h1">
           {Minhas
-          <div class="blue-title">Experiências}</div>
+          <h1 class="c-h1 isBlue">Experiências}</h1>
         </h1>
       </section>
 
-      <section class="my-experiences">
-        <div class="experience-box">
-          <h3 class="experience-title">Auto Posto Canindé</h3>
-          <p class="experience-time">SETEMBRO 2022</p>
-          <p class="experience-paragraph">
+      <section class="c-section">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Mapa da programação</h3>
+          <h4 class="c-h4">FEVEREIRO 2023</h4>
+          <p class="c-p">
+            Sou tutor no curso de desenvolvimento web da empresa, ajudando
+            alunos com foco em back-end
+          </p>
+        </div>
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Auto Posto Canindé</h3>
+          <h4 class="c-h4">SETEMBRO 2022</h4>
+          <p class="c-p">
             Atuo na administração e desenvolvo sistemas web para otimizar
             processos dentro da empresa
           </p>
         </div>
-        <div class="experience-box">
-          <h3 class="experience-title">Afil Games</h3>
-          <p class="experience-time">JULHO 2022 - AGOSTO 2022</p>
-          <p class="experience-paragraph">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Afil Games</h3>
+          <h4 class="c-h4">JULHO 2022 - AGOSTO 2022</h4>
+          <p class="c-p">
             Atuei como desenvolvedor Unity em 1 jogo da empresa que foi
             publicado na Steam e Nintendo Switch
           </p>
         </div>
-        <div class="experience-box">
-          <h3 class="experience-title">DejaVú Games</h3>
-          <p class="experience-time">MARÇO 2022 - MAIO 2022</p>
-          <p class="experience-paragraph">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">DejaVú Games</h3>
+          <h4 class="c-h4">MARÇO 2022 - MAIO 2022</h4>
+          <p class="c-p">
             Atuei como desenvolvedor Unity em 1 jogo publicado na Steam
           </p>
         </div>
-        <div class="experience-box">
-          <h3 class="experience-title">Sprovieri Games</h3>
-          <p class="experience-time">JANEIRO 2021 - AGOSTO 2022</p>
-          <p class="experience-paragraph">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Sprovieri Games</h3>
+          <h4 class="c-h4">JANEIRO 2021 - AGOSTO 2022</h4>
+          <p class="c-p">
             Montei um estúdio de jogos onde, em conjunto com profissionais de
             outras áreas, desenvolvemos 12 jogos para a Steam
           </p>
         </div>
-        <div class="experience-box">
-          <h3 class="experience-title">Crie Seus Jogos</h3>
-          <p class="experience-time">JUNHO 2020 - SETEMBRO 2021</p>
-          <p class="experience-paragraph">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Crie Seus Jogos</h3>
+          <h4 class="c-h4">JUNHO 2020 - SETEMBRO 2021</h4>
+          <p class="c-p">
             Atuei como tutor e redatei artigos semanais sobre programação de
             jogos no site crieseusjogos.com
           </p>
         </div>
-        <div class="experience-box">
-          <h3 class="experience-title">Pinel Games</h3>
-          <p class="experience-time">SETEMBRO 2020 - DEZEMBRO 2020</p>
-          <p class="experience-paragraph">
+        <div class="c-experience-box">
+          <h3 class="c-h3 isBlue">Pinel Games</h3>
+          <h4 class="c-h4">SETEMBRO 2020 - DEZEMBRO 2020</h4>
+          <p class="c-p">
             Atuei como desenvolvedor Unity em 2 jogos da empresa, corrigindo
             bugs e desenvolvendo as principais mecânicas
           </p>
         </div>
       </section>
-      <section class="title">
-        <h1>
+      <section class="c-title">
+        <h1 class="c-h1">
           {Como posso
-          <div class="blue-title">Te ajudar?}</div>
+          <h1 class="c-h1 isBlue">Te ajudar?}</h1>
         </h1>
       </section>
-      <section class="can-i-help-you">
-        <p>Estou a disposição para ajudar no seu projeto ou na sua empresa</p>
-        <address>
+      <section class="c-section">
+        <address class="c-adress">
+          <p class="c-p">
+            Estou a disposição para ajudar no seu projeto ou na sua empresa
+          </p>
           <a onclick="openNewTab('mailto:igsp1@hotmail.com')">
-            <div class="adress-box">
-              <img class="adress-icon" src="Assets/email.png" alt="Meu Email" />
-              <p class="adress-contact">igsp1@hotmail.com</p>
+            <div class="c-adress__container">
+              <img
+                class="c-adress__icon"
+                src="Assets/email.png"
+                alt="Meu Email"
+              />
+              <p class="c-adress__contact">igsp1@hotmail.com</p>
             </div>
           </a>
           <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
-            <div class="adress-box">
+            <div class="c-adress__container">
               <img
-                class="adress-icon"
+                class="c-adress__icon"
                 src="Assets/phone.png"
                 alt="Meu Telefone/Whatsapp"
               />
-              <p class="adress-contact">+55 11 99761 2295</p>
+              <p class="c-adress__contact">+55 11 99761 2295</p>
             </div>
           </a>
         </address>
       </section>
     </main>
-    <footer>
-      <section class="my-name">
-        <h2>Igor Sprovieri</h2>
+    <footer class="c-footer">
+      <section class="c-my-name">
+        <h2 class="c-h2 isBlue">Igor Sprovieri</h2>
       </section>
-      <section class="social-icons">
+      <section class="c-social-icons">
         <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-          <img class="social-icon" src="Assets/Github.png" alt="Meu GitHub" />
+          <img
+            class="c-social-icons__image"
+            src="Assets/Github.png"
+            alt="Meu GitHub"
+          />
         </a>
         <a
           onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
         >
-          <img class="social-icon" src="Assets/Linkedin.png" alt="" />
+          <img class="c-social-icons__image" src="Assets/Linkedin.png" alt="" />
         </a>
         <a onclick="openNewTab('https://www.instagram.com/igor_sprovieri/')">
-          <img class="social-icon" src="Assets/Instagram.png" alt="" />
+          <img
+            class="c-social-icons__image"
+            src="Assets/Instagram.png"
+            alt=""
+          />
         </a>
       </section>
     </footer>

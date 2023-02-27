@@ -2,60 +2,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-/*
-##########################################
-Commom atributes
-*/
+.isHidden {
+  display: none;
+}
 
-h1 {
+.isBlue {
+  color: rgb(0, 115, 177);
+}
+
+.c-body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
+  animation: fadeIn 1.5s forwards;
+}
+
+.c-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+  background-color: rgb(230, 230, 230);
+}
+
+.c-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 500px;
+}
+
+.c-main {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.c-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0px;
+  background-color: rgb(230, 230, 230);
+}
+
+.c-h1 {
   font-size: 40px;
   font-family: "JetBrains Mono", monospace;
   line-height: 46px;
   margin: 0px;
 }
 
-.blue-title {
-  color: rgb(0, 115, 177);
+.c-h1--type-witter {
+  height: 90px;
 }
 
-h2 {
+.c-h2 {
   font-size: 24px;
   font-family: "JetBrains Mono", monospace;
   margin: 0px;
 }
 
-h3 {
+.c-h3 {
   font-size: 22px;
   font-family: "JetBrains Mono", monospace;
-  color: rgb(0, 115, 177);
   margin: 0px;
 }
 
-/* 
-##### Paragraphs #####
-*/
+.c-h4 {
+  margin: 0px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
 
-p {
+.c-p {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  margin: 0px;
 }
 
-p.link-p {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  margin: 0px;
-}
-
-p.ability-description {
+.c-p--little {
   font-size: 14px;
 }
 
-/* 
-######################
-*/
-
-button {
+.c-button {
   font-size: 16px;
   font-family: "JetBrains Mono", monospace;
 
@@ -68,16 +103,216 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.c-button:hover {
   animation-name: onHoverButton;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-button:not(hover) {
-  animation-name: outHoverButton;
+.c-button:not(hover) {
+  animation-name: outHoverBotton;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+
+.c-menu .c-button {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  margin: 0px;
+  border: 0px;
+  color: black;
+  background-color: #00000000;
+}
+
+.c-menu .c-button:hover {
+  animation-name: upOnHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.c-menu .c-button:not(hover) {
+  animation-name: downOutHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.c-list {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  margin: 8px 0px 0px 0px;
+  width: 90%;
+}
+
+.c-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c-section__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  margin-top: 16px;
+  margin-left: 28px;
+}
+
+.c-social-icons__image {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.c-title {
+  padding: 50px 0px 20px 0px;
+  text-align: center;
+}
+
+.c-my-description {
+  align-items: left;
+  height: 326px;
+  width: 500px;
+  margin-right: 50px;
+}
+
+.c-my-image {
+  height: 380px;
+  width: 380px;
+  border: 5px solid rgb(0, 115, 177);
+  border-radius: 50px;
+}
+
+.c-ability-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 500px;
+  width: 250px;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 0px 16px;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.c-ability-box__image {
+  height: 70px;
+  width: 70px;
+  margin: 40px 0px 30px 0px;
+}
+
+.c-ability-box__description {
+  text-align: center;
+  margin-top: 8px;
+  width: 200px;
+}
+
+.c-project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 250px;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 16px;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.c-project-box__image {
+  height: 120px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.c-project-box .c-h3 {
+  margin: 16px 0px 4px 0px;
+}
+
+.c-project-box .c-p {
+  margin: 0px 0px;
+  text-align: center;
+}
+
+.c-project-box__icon {
+  margin: 15px 4px 0px 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.c-experience-box {
+  width: 600px;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 16px;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.c-experience-box .c-h4 {
+  margin-top: 4px;
+}
+
+.c-experience-box .c-p {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.c-adress__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.c-adress__contact {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px 8px;
+}
+
+.c-adress__icon {
+  height: 16px;
+  margin: 0px 8px;
+}
+
+@keyframes upOnHover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes downOutHover {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes onHoverButton {
@@ -106,333 +341,6 @@ button:not(hover) {
   }
 }
 
-li {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: bold;
-}
-
-/* 
-##########################################
-Semantic Elements
-*/
-
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: rgb(250, 250, 250);
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0px;
-  background-color: rgb(230, 230, 230);
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px 0px;
-  background-color: rgb(230, 230, 230);
-}
-
-/* 
-##########################################
-Sections on Header
-*/
-
-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-  width: 500px;
-}
-
-.menu-button {
-  cursor: pointer;
-}
-
-.menu-button:hover {
-  animation-name: onHoverMenuButton;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.menu-button:not(hover) {
-  animation-name: outHoverMenuButton;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes onHoverMenuButton {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes outHoverMenuButton {
-  0% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* 
-##########################################
-Sections on Main
-*/
-
-section.title {
-  padding: 50px 0px 20px 0px;
-  text-align: center;
-}
-
-section.my-presentation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 90px;
-  margin-bottom: 40px;
-}
-
-section.my-abilities {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-section.my-projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-section.my-experiences {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-section.can-i-help-you {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
-}
-
-/* 
-##########################################
-Elements on my-description section
-*/
-
-.presentation-box {
-  align-items: left;
-  height: 326px;
-  width: 500px;
-  margin-right: 50px;
-}
-
-.my-description {
-  margin: 16px 0px;
-}
-
-section.social-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 140px;
-  margin-top: 16px;
-  margin-left: 28px;
-}
-
-img.social-icon {
-  width: 34px;
-  height: 34px;
-  cursor: pointer;
-}
-
-img.my-image {
-  height: 380px;
-  width: 380px;
-  border: 5px solid rgb(0, 115, 177);
-  border-radius: 50px;
-}
-
-h1.TypeWriter {
-  height: 90px;
-}
-
-/* 
-##########################################
-Elements on my-abilities section
-*/
-
-.ability-Box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  height: 500px;
-  width: 250px;
-
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 30px;
-
-  margin: 0px 16px;
-
-  background-color: rgb(255, 255, 255);
-}
-
-img.ability-img {
-  height: 70px;
-  width: 70px;
-  margin: 40px 0px 30px 0px;
-}
-
-.ability-text {
-  text-align: center;
-  margin-top: 8px;
-  width: 200px;
-}
-
-ul.abilities-list {
-  margin: 30px 0px 0px 0px;
-  width: 90%;
-}
-
-/* 
-##########################################
-Elements on my-projects section
-*/
-
-.title-portfolio {
-  padding: 80px 0px 20px 0px;
-  text-align: center;
-}
-.projects-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  width: 250px;
-
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 30px;
-
-  margin: 16px;
-  padding: 16px;
-  background-color: rgb(255, 255, 255);
-}
-
-img.project-image {
-  height: 120px;
-  width: 100%;
-  border-radius: 20px;
-}
-
-.project-title {
-  margin: 16px 0px 4px 0px;
-}
-
-.project-paragraph {
-  margin: 0px 0px;
-  font-size: 14px;
-  text-align: center;
-}
-
-img.project-icon {
-  margin: 15px 4px 0px 4px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-/* 
-##########################################
-Elements on my-experiences section
-*/
-
-.experience-box {
-  width: 600px;
-
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 30px;
-
-  margin: 16px;
-  padding: 16px;
-  background-color: rgb(255, 255, 255);
-}
-
-.experience-time {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  margin-top: 4px;
-}
-
-.experience-paragraph {
-  margin-top: 8px;
-}
-
-/* 
-##########################################
-Elements on can-i-hel-you section
-*/
-
-.adress-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-}
-
-.adress-contact {
-  font-family: "Montserrat", sans-serif;
-  margin: 0px 8px;
-}
-
-.adress-icon {
-  height: 16px;
-  margin: 0px 8px;
-}
-
-/* 
-##########################################
-Fade In
-*/
-.fadeIn {
-  animation: fadeIn 1.5s forwards;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -443,34 +351,38 @@ Fade In
 }
 
 /* 
-##########################################
+#################################################
 Media Query
 */
+
 @media only screen and (max-device-width: 450px) {
-  .desktop-menu {
+  .c-menu {
     display: none;
   }
   .mobile-menu {
     display: flex;
   }
 
-  h1 {
+  .c-h1 {
     font-size: 30px;
     line-height: 40px;
   }
 
-  section.my-presentation {
+  .c-section__container {
     flex-direction: column-reverse;
-    margin-top: 50px;
     margin-bottom: 0px;
   }
 
-  img.my-image {
+  .c-section__container--stayOnMobile {
+    flex-direction: row;
+  }
+
+  .c-my-image {
     width: 200px;
     height: 200px;
   }
 
-  .presentation-box {
+  .c-my-description {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -481,11 +393,11 @@ Media Query
     height: 340px;
   }
 
-  section.social-icons {
+  .c-social-icons {
     margin-left: 0px;
   }
 
-  .ability-Box {
+  .c-ability-box {
     width: 124px;
     margin: 4px;
     border-radius: 14px;
@@ -493,28 +405,28 @@ Media Query
     height: 384px;
   }
 
-  img.ability-img {
+  .c-ability-box__image {
     height: 40px;
     width: 40px;
     margin: 16px;
   }
 
-  h3.ability-title {
+  .c-ability-box .c-h3 {
     font-size: 16px;
     text-align: center;
-    height: 40px;
+    height: 8px;
   }
 
-  .ability-text {
+  .c-ability-box__description {
     width: 96%;
-    height: 36px;
+    height: 72px;
   }
 
-  p.ability-description {
+  .c-ability-box .c-p {
     font-size: 12px;
   }
 
-  ul.abilities-list {
+  .c-list {
     width: 96%;
     padding: 0px;
   }
@@ -524,29 +436,25 @@ Media Query
     margin-left: 20px;
   }
 
-  .projects-line {
-    flex-direction: column;
-  }
-
-  .experience-box {
+  .c-experience-box {
     width: 80%;
     border-radius: 24px;
   }
 
-  section.can-i-help-you p {
+  .c-adress {
     width: 90%;
     text-align: center;
   }
 
-  .my-name {
+  .c-my-name {
     margin-bottom: 22px;
   }
 
-  .my-name h2 {
+  .c-my-name .c-h2 {
     font-size: 32px;
   }
 
-  footer {
+  .c-footer {
     flex-direction: column;
     padding: 70px 0px;
   }
