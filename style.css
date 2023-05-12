@@ -293,7 +293,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .c-project-box__icons {
@@ -307,6 +307,7 @@
 
 .c-project-box__icon {
   margin: 0px;
+  margin-right: 8px;
   width: 24px;
   height: 24px;
 }
