@@ -338,6 +338,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 32px;
+  cursor: pointer;
 }
 
 .c-adress__contact {
