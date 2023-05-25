@@ -414,12 +414,17 @@ Media Query
     display: none;
   }
   .mobile-menu {
-    display: flex;
+    display: none;
   }
 
   .c-h1 {
     font-size: 30px;
     line-height: 40px;
+  }
+
+  .c-section--scrollOnMobile {
+    flex-direction: row;
+    overflow-x: scroll;
   }
 
   .c-section__container {
@@ -428,6 +433,10 @@ Media Query
   }
 
   .c-section__container--stayOnMobile {
+    flex-direction: row;
+  }
+
+  .c-section__container--scrollOnMobile {
     flex-direction: row;
   }
 

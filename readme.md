@@ -15,7 +15,6 @@ https://igorsprovieri.github.io/site-portfolio/
 - Flexbox
 - DOM
 - Events
-- API request and item listing
 - CSS Media Query
 
 ## Features
@@ -24,7 +23,7 @@ https://igorsprovieri.github.io/site-portfolio/
 - CSS
 - JS
 
-## Instructions to run:
+## Getting Started
 
 1. Clone the project:
 
@@ -50,4 +49,4 @@ index.html
 
 ### _Igor Sprovieri Pereira_
 
-Programming student since 2013, started working with Unity C# in 2020, paticipated in 16 team projects as a freelancer and his own game studio. At this time, he was a tutor on Crie Seus Jogos company, helping students and writing articles to company's website. In 2022 he decided to learn web development with HTML, CSS and JS. Actually he is fullstack programmer and he is specializing in react.js, node.js, docker, mongoose, postgres and sequelize.
+In 2013 I learned to programming games how as a hobbie, in 2020 I started to work on this area, I did some freelancers, opened my game studio and I was a writter for over a year on site crieseusjogos.com. In 2022 I decided to go a web developer professional and today I am fullstack with react and node
