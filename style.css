@@ -234,6 +234,26 @@
   background-color: rgb(255, 255, 255);
 }
 
+.c-softSkills-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 180px;
+  height: 160px;
+
+  padding: 8px;
+  margin: 0px 16px;
+
+  text-align: center;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  background-color: rgb(255, 255, 255);
+}
+
 .c-ability-box__image {
   height: 70px;
   width: 70px;
@@ -422,6 +442,10 @@ Media Query
     line-height: 40px;
   }
 
+  .c-h1--type-witter {
+    font-size: 28px;
+  }
+
   .c-section--scrollOnMobile {
     flex-direction: row;
     overflow-x: scroll;
@@ -453,11 +477,22 @@ Media Query
     margin-top: 16px;
     width: 94vw;
     text-align: center;
-    height: 340px;
+    height: 410px;
   }
 
   .c-social-icons {
     margin-left: 0px;
+  }
+
+  .c-softSkills-box {
+    width: 120px;
+    height: 100px;
+    border-radius: 14px;
+    margin: 4px;
+  }
+
+  .c-softSkills-box .c-h3 {
+    font-size: 16px;
   }
 
   .c-ability-box {
@@ -466,6 +501,11 @@ Media Query
     border-radius: 14px;
 
     height: 294px;
+  }
+
+  .c-ability-box--small {
+    width: 140px;
+    height: 80px;
   }
 
   .c-ability-box__image {
@@ -479,6 +519,10 @@ Media Query
     text-align: center;
     height: 8px;
     margin-bottom: 16px;
+  }
+
+  .c-ability-box--small .c-h3 {
+    margin: 0px;
   }
 
   .c-ability-box__description {
