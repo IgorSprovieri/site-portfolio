@@ -90,6 +90,10 @@
   font-size: 14px;
 }
 
+.c-p--gray {
+  color: gray;
+}
+
 .c-button {
   font-size: 16px;
   font-family: "JetBrains Mono", monospace;
@@ -234,26 +238,6 @@
   background-color: rgb(255, 255, 255);
 }
 
-.c-softSkills-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 180px;
-  height: 160px;
-
-  padding: 8px;
-  margin: 0px 16px;
-
-  text-align: center;
-
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 30px;
-
-  background-color: rgb(255, 255, 255);
-}
-
 .c-ability-box__image {
   height: 70px;
   width: 70px;
@@ -288,6 +272,21 @@
   border-radius: 20px;
 }
 
+.c-project-box__tech-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+
+  width: 100%;
+  height: fit-content;
+  margin-top: 16px;
+}
+
+.c-project-box__tech-icon {
+  height: 32px;
+  margin-right: 8px;
+}
+
 .c-project-box .c-h3 {
   margin: 16px 0px 4px 0px;
 }
@@ -300,6 +299,11 @@
 .c-project-box .c-p--little {
   margin: 0px 0px;
   text-align: center;
+}
+
+.c-project-box .c-p--gray {
+  margin-top: 16px;
+  text-align: left;
 }
 
 .c-project-box .c-button-reverse {
