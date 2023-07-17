@@ -17,6 +17,9 @@
             <p class="link-p">Blog</p></a
           >
         </button>
+        <button class="c-button" onclick="scrollPageTo('section-home')">
+          Home
+        </button>
         <button class="c-button" onclick="scrollPageTo('section-abilities')">
           Habilidades
         </button>
@@ -27,8 +30,22 @@
           Experiências
         </button>
       </menu>
+      <div class="c-social-icons">
+        <a onclick="openNewTab('https://github.com/IgorSprovieri')">
+          <img
+            class="c-social-icons__image"
+            src="Assets/Github.png"
+            alt="Meu GitHub"
+          />
+        </a>
+        <a
+          onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
+        >
+          <img class="c-social-icons__image" src="Assets/Linkedin.png" alt="" />
+        </a>
+      </div>
     </header>
-    <main class="c-main">
+    <main class="c-main" id="section-home">
       <section class="c-section">
         <div class="c-section__container c-section__container">
           <div class="c-my-description">
@@ -37,33 +54,15 @@
             </h1>
             <p class="c-p">
               Programador desde 2013, comecei desenvolvendo jogos com a Unity,
-              onde em 2020 eu abri meu estúdio de jogos e até 2022 desenvolvi 16
+              onde em 2020 eu abri meu estúdio de jogos e até 2022 desenvolvi 14
               projetos em equipe, autorais e de terceiros. Também fui redator
               por mais de um ano do site crieseusjogos.com.br. Após esse período
               comecei a me dedicar ao desenvolvimento web e hoje atuo como
-              desenvolvedor fullstack com react, typescript e node.
+              desenvolvedor fullstack com React, Next, Typescript e Node.
             </p>
             <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
               <button class="c-button">ENTRAR EM CONTATO</button></a
             >
-            <div class="c-social-icons">
-              <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-                <img
-                  class="c-social-icons__image"
-                  src="Assets/Github.png"
-                  alt="Meu GitHub"
-                />
-              </a>
-              <a
-                onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')"
-              >
-                <img
-                  class="c-social-icons__image"
-                  src="Assets/Linkedin.png"
-                  alt=""
-                />
-              </a>
-            </div>
           </div>
           <img
             class="c-my-image"
@@ -73,7 +72,7 @@
         </div>
       </section>
 
-      <section class="c-title">
+      <section class="c-title" id="section-abilities">
         <h1 class="c-h1">
           {Habilidades que
           <h1 class="c-h1 isBlue">Domino}</h1>
@@ -82,61 +81,121 @@
 
       <section class="c-section">
         <div class="c-section__container c-section__container--stayOnMobile">
-          <div class="c-ability-box">
-            <img class="c-ability-box__image" src="Assets/General.png" alt="" />
-            <h3 class="c-h3 isBlue">Geral</h3>
-            <div class="c-ability-box__description">
-              <p class="c-p c-p--little">
-                Tecnologias que utilizo no dia a dia da programação
-              </p>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image"
+                src="Assets/typescript.svg"
+                alt="Typescript"
+              />
             </div>
-            <ul class="c-list">
-              <li>Typescript</li>
-              <li>Figma</li>
-              <li>Git e GitHub</li>
-              <li>Docker</li>
-              <li>Insomnia</li>
-            </ul>
+            <p class="c-p">Typescript para tipagem e superset do JS</p>
           </div>
-
-          <div class="c-ability-box">
-            <img class="c-ability-box__image" src="Assets/Front.png" alt="" />
-            <h3 class="c-h3 isBlue">Front-End</h3>
-            <div class="c-ability-box__description">
-              <p class="c-p c-p--little">
-                Tecnologias que utilizo para criação de páginas web
-              </p>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/react.svg"
+                alt="React"
+              />
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/next.svg"
+                alt="Next"
+              />
             </div>
-            <ul class="c-list">
-              <li>JavaScript</li>
-              <li>HTML e CSS</li>
-              <li>React</li>
-              <li>Styled Components</li>
-              <li>Chakra UI</li>
-              <li>Redux</li>
-              <li>Vercel</li>
-            </ul>
+            <p class="c-p">
+              React e Next para criação de páginas HTML com Jsx e SSR
+            </p>
           </div>
-
-          <div class="c-ability-box">
-            <img class="c-ability-box__image" src="Assets/End.png" alt="" />
-            <h3 class="c-h3 isBlue">Back-End</h3>
-            <div class="c-ability-box__description">
-              <p class="c-p c-p--little">
-                Controle de banco de dados e aplicações na nuvem
-              </p>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/styled-components.svg"
+                alt="Styled Components"
+              />
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/chakra.svg"
+                alt="Chakra UI"
+              />
             </div>
-            <ul class="c-list">
-              <li>SQL</li>
-              <li>Node</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-              <li>Postgres</li>
-              <li>Sequelize</li>
-              <li>TypeORM</li>
-              <li>Railway.app</li>
-              <li>AWS</li>
-            </ul>
+            <p class="c-p">CSS Avançado com Styled Components e Chakra UI</p>
+          </div>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image"
+                src="Assets/redux.svg"
+                alt="Redux"
+              />
+            </div>
+            <p class="c-p">
+              Bibliotecas como Redux, Formik, Yup, React Query e Axios
+            </p>
+          </div>
+        </div>
+        <div class="c-section__container c-section__container--stayOnMobile">
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image"
+                src="Assets/express-mini.svg"
+                alt="Express"
+              />
+            </div>
+            <p class="c-p">Express para criação de rotas HTTP e Api's REST</p>
+          </div>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/postgres.svg"
+                alt="Postgres"
+              />
+              <img
+                class="c-ability-box__image"
+                src="Assets/mongo.svg"
+                alt="MongoDB"
+              />
+            </div>
+
+            <p class="c-p">Controle de DB SQL e NoSQL como Postgres e Mongo</p>
+          </div>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/type-orm-icon.png"
+                alt="Type ORM"
+              />
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/sequelize.svg"
+                alt="Sequelize"
+              />
+            </div>
+            <p class="c-p">
+              TypeORM e Sequelize para gerenciar DB através de Api's
+            </p>
+          </div>
+          <div class="c-ability-container">
+            <div class="c-ability-box">
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/aws.svg"
+                alt="AWS"
+              />
+              <img
+                class="c-ability-box__image c-ability-box__image--small"
+                src="Assets/railway.svg"
+                alt="Railway"
+              />
+            </div>
+            <p class="c-p">
+              AWS, Railway e Vercel para deploy de Api's e sites
+            </p>
           </div>
         </div>
       </section>
@@ -340,8 +399,8 @@
           <h3 class="c-h3 isBlue">Freelancer - Desenvolvedor Fullstack</h3>
           <h4 class="c-h4">MAR 2023</h4>
           <p class="c-p">
-            Desenvolvo trabalhos avulsos como autônomo usando React, Typescript
-            e Node
+            Desenvolvo trabalhos como autônomo usando React, Next, Typescript e
+            Node
           </p>
         </div>
         <div class="c-experience-box">
