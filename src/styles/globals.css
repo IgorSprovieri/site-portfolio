@@ -181,13 +181,6 @@
   margin-right: 50px;
 }
 
-.c-my-image {
-  height: 380px;
-  width: 380px;
-  border: 5px solid rgb(0, 115, 177);
-  border-radius: 50px;
-}
-
 .c-ability-container {
   display: flex;
   flex-direction: column;
