@@ -184,7 +184,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 230px;
+  height: calc(100vh - 200px);
 }
 
 .c-section__container {
