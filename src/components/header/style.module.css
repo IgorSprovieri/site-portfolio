@@ -60,3 +60,15 @@
     transform: translateY(0px);
   }
 }
+
+.c-social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 96px;
+}
+
+.c-social-icons__image {
+  cursor: pointer;
+}

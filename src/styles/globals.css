@@ -16,3 +16,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.c-body::-webkit-scrollbar {
+  display: none;
+}
