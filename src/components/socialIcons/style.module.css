@@ -1,0 +1,11 @@
+.social-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 96px;
+}
+
+.social-icons-image {
+  cursor: pointer;
+}

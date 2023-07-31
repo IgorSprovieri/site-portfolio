@@ -1,4 +1,4 @@
-import { MenuButton } from "@/components";
+import { MenuButton, SocialIcons } from "@/components";
 
 export default function Home() {
   return (
@@ -13,18 +13,7 @@ export default function Home() {
             Frag Components
           </MenuButton>
         </menu>
-        <div class="c-social-icons">
-          <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-            <img
-              class="c-social-icons__image"
-              src="/Github.png"
-              alt="Meu GitHub"
-            />
-          </a>
-          <a onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')">
-            <img class="c-social-icons__image" src="/Linkedin.png" alt="" />
-          </a>
-        </div>
+        <SocialIcons></SocialIcons>
       </header>
       <main class="c-main" name="section-home">
         <section class="c-section">
@@ -427,18 +416,7 @@ export default function Home() {
         <section class="c-my-name">
           <h2 class="c-h2 isBlue">Igor Sprovieri</h2>
         </section>
-        <section class="c-social-icons">
-          <a onclick="openNewTab('https://github.com/IgorSprovieri')">
-            <img
-              class="c-social-icons__image"
-              src="/Github.png"
-              alt="Meu GitHub"
-            />
-          </a>
-          <a onclick="openNewTab('https://www.linkedin.com/in/igor-sprovieri-768b09196/')">
-            <img class="c-social-icons__image" src="/Linkedin.png" alt="" />
-          </a>
-        </section>
+        <SocialIcons></SocialIcons>
       </footer>
     </>
   );
