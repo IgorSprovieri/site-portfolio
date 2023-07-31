@@ -1,0 +1,41 @@
+.menuButton {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  margin: 0px;
+  border: 0px;
+  color: black;
+  background-color: #00000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.menuButton:hover {
+  animation-name: upOnHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.menuButton:not(hover) {
+  animation-name: downOutHover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes upOnHover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes downOutHover {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
