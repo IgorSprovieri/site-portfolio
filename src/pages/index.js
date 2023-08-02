@@ -1,4 +1,4 @@
-import { MenuButton, MyImage, SocialIcons } from "@/components";
+import { MenuButton, MyImage, SocialIcons, Title } from "@/components";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         <section className="c-section">
           <div className="c-section__container c-section__container">
             <div className="c-my-description">
-              <h1 className="TypeWriter c-h1 c-h1--type-witter">
+              <h1 className=" c-h1 c-h1--type-witter">
                 Olá, Muito prazer! Sou o Igor Sprovieri
               </h1>
               <p className="c-p">
@@ -27,7 +27,7 @@ export default function Home() {
                 onde em 2020 eu abri meu estúdio de jogos e até 2022 desenvolvi
                 14 projetos em equipe, autorais e de terceiros. Também fui
                 redator por mais de um ano do site crieseusjogos.com.br. Após
-                esse período comecei a me dedicar ao desenvolvimento web e hoje
+                esse período, comecei a me dedicar ao desenvolvimento web e hoje
                 atuo como desenvolvedor fullstack com React, Next, Typescript e
                 Node.
               </p>
@@ -39,10 +39,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="c-title" name="section-abilities">
-          <h1 className="TypeWriter c-h1">{"{Habilidades que"}</h1>
-          <h1 className="TypeWriter c-h1 isBlue">{"Domino}"}</h1>
-        </section>
+        <Title
+          firstText={"Habilidades que"}
+          secondText={"Domino"}
+          name={"section-abilities"}
+        ></Title>
 
         <section className="c-section">
           <div className="c-section__container c-section__container--stayOnMobile">
@@ -113,7 +114,7 @@ export default function Home() {
                 />
               </div>
               <p className="c-p">
-                Express para criação de rotas HTTP e Api's REST
+                Express para criação de rotas HTTP e Api&apos;s REST
               </p>
             </div>
             <div className="c-ability-container">
@@ -148,7 +149,7 @@ export default function Home() {
                 />
               </div>
               <p className="c-p">
-                TypeORM e Sequelize para gerenciar DB através de Api's
+                TypeORM e Sequelize para gerenciar DB através de Api&apos;s
               </p>
             </div>
             <div className="c-ability-container">
@@ -171,10 +172,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="c-title" name="section-portfolio">
-          <h1 className="TypeWriter c-h1">{`{Portfólio de`}</h1>
-          <h1 className="TypeWriter c-h1 isBlue">{`Projetos}`}</h1>
-        </section>
+        <Title
+          firstText={"Portfólio de"}
+          secondText={"Projetos"}
+          name={"section-portfolio"}
+        ></Title>
 
         <section className="c-section c-section--scrollOnMobile">
           <div className="c-section__container c-section__container--scrollOnMobile">
@@ -356,10 +358,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="c-title" name="section-experiences">
-          <h1 className="TypeWriter c-h1">{`{Minhas`}</h1>
-          <h1 className="TypeWriter c-h1 isBlue">{`Experiências}`}</h1>
-        </section>
+        <Title
+          firstText={"Minhas"}
+          secondText={"Experiências"}
+          name={"section-experiences"}
+        ></Title>
 
         <section className="c-section">
           <div className="c-experience-box">
@@ -410,10 +413,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="c-title" name="section-frag-components">
-          <h1 className="TypeWriter c-h1">{`{Frag`}</h1>
-          <h1 className="TypeWriter c-h1 isBlue">{`Components}`}</h1>
-        </section>
+        <Title
+          firstText={"Frag"}
+          secondText={"Components"}
+          name={"section-frag-components"}
+        ></Title>
+
         <section className="c-section">
           <section className="c-section__container">
             <div className="c-frag-container"></div>
