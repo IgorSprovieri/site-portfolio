@@ -16,10 +16,12 @@
 .ability-icons-container {
   display: flex;
   flex-direction: center;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
 
-  width: 124px;
+  padding: 0px 20px;
+
+  width: 84px;
   height: 90px;
 
   border: 1px solid #e6e6e6;

@@ -1,7 +1,10 @@
 import {
+  AbilityCard,
+  Icon,
   MenuButton,
   MyDescription,
   MyImage,
+  SmallIcon,
   SocialIcons,
   Title,
 } from "@/components";
@@ -36,129 +39,78 @@ export default function Home() {
         ></Title>
 
         <section className="c-section">
+          <section className="c-section__container c-section__container--stayOnMobile">
+            <AbilityCard
+              icons={<Icon src="/typescript.svg" alt="Typescript"></Icon>}
+            >
+              Typescript para tipagem e superset do JS
+            </AbilityCard>
+            <AbilityCard
+              icons={
+                <>
+                  <SmallIcon src="/react.svg" alt="React"></SmallIcon>
+                  <SmallIcon src="/next.svg" alt="Next"></SmallIcon>
+                </>
+              }
+            >
+              React e Next para criação de páginas HTML com Jsx e SSR
+            </AbilityCard>
+            <AbilityCard
+              icons={
+                <>
+                  <SmallIcon
+                    src="/styled-components.svg"
+                    alt="Styled Components"
+                  ></SmallIcon>
+                  <SmallIcon src="/chakra.svg" alt="Chakra UI"></SmallIcon>
+                </>
+              }
+            >
+              CSS Avançado com Styled Components e Chakra UI
+            </AbilityCard>
+            <AbilityCard icons={<Icon src="/redux.svg" alt="Redux"></Icon>}>
+              Bibliotecas como Redux, Formik, Yup, React Query e Axios
+            </AbilityCard>
+          </section>
           <div className="c-section__container c-section__container--stayOnMobile">
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image"
-                  src="/typescript.svg"
-                  alt="Typescript"
-                />
-              </div>
-              <p className="c-p">Typescript para tipagem e superset do JS</p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/react.svg"
-                  alt="React"
-                />
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/next.svg"
-                  alt="Next"
-                />
-              </div>
-              <p className="c-p">
-                React e Next para criação de páginas HTML com Jsx e SSR
-              </p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/styled-components.svg"
-                  alt="Styled Components"
-                />
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/chakra.svg"
-                  alt="Chakra UI"
-                />
-              </div>
-              <p className="c-p">
-                CSS Avançado com Styled Components e Chakra UI
-              </p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image"
-                  src="/redux.svg"
-                  alt="Redux"
-                />
-              </div>
-              <p className="c-p">
-                Bibliotecas como Redux, Formik, Yup, React Query e Axios
-              </p>
-            </div>
-          </div>
-          <div className="c-section__container c-section__container--stayOnMobile">
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image"
-                  src="/express-mini.svg"
-                  alt="Express"
-                />
-              </div>
-              <p className="c-p">
-                Express para criação de rotas HTTP e Api&apos;s REST
-              </p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/postgres.svg"
-                  alt="Postgres"
-                />
-                <img
-                  className="c-ability-box__image"
-                  src="/mongo.svg"
-                  alt="MongoDB"
-                />
-              </div>
-
-              <p className="c-p">
-                Controle de DB SQL e NoSQL como Postgres e Mongo
-              </p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/type-orm-icon.png"
-                  alt="Type ORM"
-                />
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/sequelize.svg"
-                  alt="Sequelize"
-                />
-              </div>
-              <p className="c-p">
-                TypeORM e Sequelize para gerenciar DB através de Api&apos;s
-              </p>
-            </div>
-            <div className="c-ability-container">
-              <div className="c-ability-box">
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/aws.svg"
-                  alt="AWS"
-                />
-                <img
-                  className="c-ability-box__image c-ability-box__image--small"
-                  src="/railway.svg"
-                  alt="Railway"
-                />
-              </div>
-              <p className="c-p">
-                AWS, Railway e Vercel para deploy de Api&apos;s e sites
-              </p>
-            </div>
+            <AbilityCard
+              icons={<Icon src="/express-mini.svg" alt="Express"></Icon>}
+            >
+              Express para criação de rotas HTTP e Api&apos;s REST
+            </AbilityCard>
+            <AbilityCard
+              icons={
+                <>
+                  <SmallIcon src="/postgres.svg" alt="Postgres"></SmallIcon>
+                  <SmallIcon src="/mongo.svg" alt="MongoDB"></SmallIcon>
+                </>
+              }
+            >
+              Controle de DB SQL e NoSQL como Postgres e Mongo
+            </AbilityCard>
+            <AbilityCard
+              icons={
+                <>
+                  <SmallIcon
+                    src="/type-orm-icon.png"
+                    alt="Type ORM"
+                  ></SmallIcon>
+                  <SmallIcon src="/sequelize.svg" alt="Sequelize"></SmallIcon>
+                </>
+              }
+            >
+              TypeORM e Sequelize para gerenciar DB através de Api&apos;s
+            </AbilityCard>
+            <AbilityCard
+              icons={
+                <>
+                  <SmallIcon src="/aws.svg" alt="AWS"></SmallIcon>
+                  <SmallIcon src="/railway.svg" alt="Railway"></SmallIcon>
+                </>
+              }
+            >
+              AWS, Railway e Vercel para deploy de Api&apos;s e sites
+            </AbilityCard>
           </div>
         </section>
 
