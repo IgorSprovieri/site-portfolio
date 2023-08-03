@@ -1,9 +1,10 @@
 .projects-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  height: calc(100vh - 290px);
+  justify-content: space-between;
+  padding-bottom: 80px;
+  height: calc(100vh - 370px);
 }
 
 .projects-container {

@@ -1,3 +1,10 @@
+.h2 {
+  font-size: 32px;
+  font-family: "JetBrains Mono", monospace;
+  margin: 0px;
+  color: rgb(0, 115, 177);
+}
+
 .paragraph {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
