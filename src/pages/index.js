@@ -8,6 +8,7 @@ import {
   SocialIcons,
   Title,
 } from "@/components";
+import { SectionAbilities, SectionDescription } from "@/sections";
 
 export default function Home() {
   return (
@@ -25,12 +26,7 @@ export default function Home() {
         <SocialIcons></SocialIcons>
       </header>
       <main className="c-main" name="section-home">
-        <section className="c-section">
-          <div className="c-section__container">
-            <MyDescription></MyDescription>
-            <MyImage></MyImage>
-          </div>
-        </section>
+        <SectionDescription></SectionDescription>
 
         <Title
           firstText={"Habilidades que"}
@@ -38,81 +34,7 @@ export default function Home() {
           name={"section-abilities"}
         ></Title>
 
-        <section className="c-section">
-          <section className="c-section__container c-section__container--stayOnMobile">
-            <AbilityCard
-              icons={<Icon src="/typescript.svg" alt="Typescript"></Icon>}
-            >
-              Typescript para tipagem e superset do JS
-            </AbilityCard>
-            <AbilityCard
-              icons={
-                <>
-                  <SmallIcon src="/react.svg" alt="React"></SmallIcon>
-                  <SmallIcon src="/next.svg" alt="Next"></SmallIcon>
-                </>
-              }
-            >
-              React e Next para criação de páginas HTML com Jsx e SSR
-            </AbilityCard>
-            <AbilityCard
-              icons={
-                <>
-                  <SmallIcon
-                    src="/styled-components.svg"
-                    alt="Styled Components"
-                  ></SmallIcon>
-                  <SmallIcon src="/chakra.svg" alt="Chakra UI"></SmallIcon>
-                </>
-              }
-            >
-              CSS Avançado com Styled Components e Chakra UI
-            </AbilityCard>
-            <AbilityCard icons={<Icon src="/redux.svg" alt="Redux"></Icon>}>
-              Bibliotecas como Redux, Formik, Yup, React Query e Axios
-            </AbilityCard>
-          </section>
-          <div className="c-section__container c-section__container--stayOnMobile">
-            <AbilityCard
-              icons={<Icon src="/express-mini.svg" alt="Express"></Icon>}
-            >
-              Express para criação de rotas HTTP e Api&apos;s REST
-            </AbilityCard>
-            <AbilityCard
-              icons={
-                <>
-                  <SmallIcon src="/postgres.svg" alt="Postgres"></SmallIcon>
-                  <SmallIcon src="/mongo.svg" alt="MongoDB"></SmallIcon>
-                </>
-              }
-            >
-              Controle de DB SQL e NoSQL como Postgres e Mongo
-            </AbilityCard>
-            <AbilityCard
-              icons={
-                <>
-                  <SmallIcon
-                    src="/type-orm-icon.png"
-                    alt="Type ORM"
-                  ></SmallIcon>
-                  <SmallIcon src="/sequelize.svg" alt="Sequelize"></SmallIcon>
-                </>
-              }
-            >
-              TypeORM e Sequelize para gerenciar DB através de Api&apos;s
-            </AbilityCard>
-            <AbilityCard
-              icons={
-                <>
-                  <SmallIcon src="/aws.svg" alt="AWS"></SmallIcon>
-                  <SmallIcon src="/railway.svg" alt="Railway"></SmallIcon>
-                </>
-              }
-            >
-              AWS, Railway e Vercel para deploy de Api&apos;s e sites
-            </AbilityCard>
-          </div>
-        </section>
+        <SectionAbilities></SectionAbilities>
 
         <Title
           firstText={"Portfólio de"}

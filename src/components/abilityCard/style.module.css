@@ -1,4 +1,4 @@
-.ability-container {
+.ability-content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,15 +43,4 @@
   100% {
     transform: translateY(0px);
   }
-}
-
-.c-ability-box__image {
-  height: 40px;
-  width: 40px;
-  margin: 4px;
-}
-
-.c-ability-box__image--small {
-  height: 32px;
-  width: 32px;
 }

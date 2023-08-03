@@ -24,3 +24,30 @@ export const MenuButton = ({ children, scrollTo }) => {
     </Link>
   );
 };
+
+export const SwitchButton = ({ texts, value, setValue }) => {
+  return (
+    <div>
+      <button
+        className={`${styles["switch-left"]} ${
+          value === true
+            ? styles["switch-selected"]
+            : styles["switch-non-selected"]
+        }`}
+        onClick={() => setValue(true)}
+      >
+        {texts[0]}
+      </button>
+      <button
+        className={`${styles["switch-right"]} ${
+          value === false
+            ? styles["switch-selected"]
+            : styles["switch-non-selected"]
+        }`}
+        onClick={() => setValue(false)}
+      >
+        {texts[1]}
+      </button>
+    </div>
+  );
+};
