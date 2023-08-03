@@ -1,4 +1,10 @@
-import { MenuButton, MyImage, SocialIcons, Title } from "@/components";
+import {
+  MenuButton,
+  MyDescription,
+  MyImage,
+  SocialIcons,
+  Title,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -18,23 +24,7 @@ export default function Home() {
       <main className="c-main" name="section-home">
         <section className="c-section">
           <div className="c-section__container c-section__container">
-            <div className="c-my-description">
-              <h1 className=" c-h1 c-h1--type-witter">
-                Olá, Muito prazer! Sou o Igor Sprovieri
-              </h1>
-              <p className="c-p">
-                Programador desde 2013, comecei desenvolvendo jogos com a Unity,
-                onde em 2020 eu abri meu estúdio de jogos e até 2022 desenvolvi
-                14 projetos em equipe, autorais e de terceiros. Também fui
-                redator por mais de um ano do site crieseusjogos.com.br. Após
-                esse período, comecei a me dedicar ao desenvolvimento web e hoje
-                atuo como desenvolvedor fullstack com React, Next, Typescript e
-                Node.
-              </p>
-              <a onclick="openNewTab('https://wa.me/message/AQZS3NOUQULWL1')">
-                <button className="c-button">ENTRAR EM CONTATO</button>
-              </a>
-            </div>
+            <MyDescription></MyDescription>
             <MyImage></MyImage>
           </div>
         </section>

@@ -1,0 +1,14 @@
+.my-description-container {
+  align-items: left;
+  height: 326px;
+  width: 500px;
+  margin-right: 50px;
+}
+
+.my-description-title {
+  font-size: 40px;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 46px;
+  margin: 0px;
+  height: 90px;
+}

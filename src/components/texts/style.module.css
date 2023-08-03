@@ -1,0 +1,12 @@
+.paragraph {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.paragraph-little {
+  font-size: 14px;
+}
+
+.paragraph-gray {
+  color: gray;
+}

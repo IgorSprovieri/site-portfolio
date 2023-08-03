@@ -373,32 +373,6 @@
   margin: 0px 8px;
 }
 
-@keyframes onHoverButton {
-  0% {
-    background-color: rgb(0, 115, 177);
-    color: rgb(250, 250, 250);
-    border: 2px solid rgb(0, 115, 177);
-  }
-  100% {
-    background-color: rgb(250, 250, 250);
-    color: rgb(0, 115, 177);
-    border: 2px solid rgb(0, 115, 177);
-  }
-}
-
-@keyframes outHoverButton {
-  0% {
-    background-color: rgb(250, 250, 250);
-    color: rgb(0, 115, 177);
-    border: 2px solid rgb(0, 115, 177);
-  }
-  100% {
-    background-color: rgb(0, 115, 177);
-    color: rgb(250, 250, 250);
-    border: 2px solid rgb(0, 115, 177);
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
