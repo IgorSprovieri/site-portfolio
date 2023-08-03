@@ -1,4 +1,9 @@
-import { GitHubButton, ProjectCard, Window } from "@/components";
+import {
+  GitHubButton,
+  ProjectCard,
+  RepositoryCard,
+  Window,
+} from "@/components";
 import { Projects } from "./projects";
 import styles from "./style.module.css";
 import { useState } from "react";
@@ -28,26 +33,7 @@ export const SectionProjects = () => {
             ?.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
             ?.map((repo) => {
               return (
-                <ProjectCard
-                  key={repo.id}
-                  src={"/blank.png"}
-                  alt={`repo ${repo.name}`}
-                  title={
-                    repo.name.lenght < 16 ? repo.name : repo.name.slice(0, 16)
-                  }
-                  Button={
-                    <GitHubButton onClick={() => window.open(repo.html_url)}>
-                      Ver Repositório
-                    </GitHubButton>
-                  }
-                >
-                  {repo.description || (
-                    <>
-                      <br></br>
-                      <br></br>
-                    </>
-                  )}
-                </ProjectCard>
+                <RepositoryCard key={repo.id} repo={repo}></RepositoryCard>
               );
             })}
         </div>
@@ -57,7 +43,7 @@ export const SectionProjects = () => {
           <Projects></Projects>
         </div>
         <GitHubButton onClick={() => setWindowOpen(true)}>
-          Todos os Repositórios
+          Ver Todos os Projetos
         </GitHubButton>
       </section>
     </>
