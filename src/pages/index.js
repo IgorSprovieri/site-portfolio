@@ -2,6 +2,7 @@ import {
   AbilityCard,
   Css,
   Express,
+  GitHubButton,
   Html,
   Icon,
   Js,
@@ -110,11 +111,7 @@ export default function Home() {
                   <TypeORM></TypeORM>
                 </>
               }
-              Button={
-                <WebsiteButton onClick={() => window.open()}>
-                  Visitar Website
-                </WebsiteButton>
-              }
+              Button={<GitHubButton>Ver Repositório</GitHubButton>}
             >
               Uma api para controle de estoque de lojas, varejo, etc.
             </ProjectCard>

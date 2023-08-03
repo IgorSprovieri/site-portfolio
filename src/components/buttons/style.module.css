@@ -129,7 +129,7 @@
   border-radius: 30px;
   cursor: pointer;
 
-  width: 154px;
+  width: fit-content;
 
   padding: 4px 8px;
   margin: 0px;
