@@ -142,13 +142,13 @@
   margin-left: 8px;
 }
 
-.icon-button-text:hover {
+.icon-button:hover {
   animation-name: outHoverButton;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-.icon-button-text:not(hover) {
+.icon-button:not(hover) {
   animation-name: onHoverButton;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
