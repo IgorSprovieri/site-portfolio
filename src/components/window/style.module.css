@@ -15,7 +15,7 @@
 }
 
 .window-container {
-  width: 64vw;
+  width: 70vw;
   height: 70vh;
   background-color: white;
   border-radius: 20px;
@@ -46,7 +46,8 @@
 
   margin-top: 32px;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
+  overflow-y: scroll;
 }
 
 @keyframes open {
