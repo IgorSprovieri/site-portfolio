@@ -20,3 +20,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.repo-container {
+  height: 140px;
+  width: 310px;
+  margin-right: 16px;
+}
