@@ -442,17 +442,6 @@ Media Query
     margin-left: 0px;
   }
 
-  .c-softSkills-box {
-    width: 120px;
-    height: 100px;
-    border-radius: 14px;
-    margin: 4px;
-  }
-
-  .c-softSkills-box .c-h3 {
-    font-size: 16px;
-  }
-
   .c-ability-box {
     width: 110px;
     margin: 4px;

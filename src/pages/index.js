@@ -23,7 +23,7 @@ export default function Home() {
       </header>
       <main className="c-main" name="section-home">
         <section className="c-section">
-          <div className="c-section__container c-section__container">
+          <div className="c-section__container">
             <MyDescription></MyDescription>
             <MyImage></MyImage>
           </div>

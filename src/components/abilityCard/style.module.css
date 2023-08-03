@@ -1,0 +1,55 @@
+.ability-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  text-align: center;
+  margin: 20px;
+}
+
+.ability-paragraph {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+.ability-icons-container {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+
+  width: 124px;
+  height: 90px;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  box-shadow: -2px 2px 5px rgb(180, 180, 180);
+}
+
+.ability-icons-container:hover {
+  animation: pingPong 1.5s infinite;
+}
+
+@keyframes pingPong {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.c-ability-box__image {
+  height: 40px;
+  width: 40px;
+  margin: 4px;
+}
+
+.c-ability-box__image--small {
+  height: 32px;
+  width: 32px;
+}
