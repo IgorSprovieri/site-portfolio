@@ -8,13 +8,23 @@ import { useQuery } from "react-query";
 export const SectionProjects = () => {
   const [windowOpen, setWindowOpen] = useState(false);
 
-  const { data } = useQuery("repos", async () => {
-    return await axios.get(`https://api.github.com/users/IgorSprovieri/repos`, {
-      headers: {
-        Authorization: `token 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`,
-      },
-    });
-  });
+  const { data } = useQuery(
+    "repos",
+    async () => {
+      return await axios.get(
+        `https://api.github.com/users/IgorSprovieri/repos`,
+        {
+          headers: {
+            Authorization: `token ${process.env.NEXT_PUBLIC_TOKEN_GITHUB}`,
+          },
+        }
+      );
+    },
+    {
+      onError: () => console.log(process.env.NEXT_PUBLIC_TOKEN_GITHUB),
+      onSuccess: () => console.log(process.env.NEXT_PUBLIC_TOKEN_GITHUB),
+    }
+  );
 
   return (
     <>
