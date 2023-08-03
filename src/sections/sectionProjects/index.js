@@ -32,14 +32,21 @@ export const SectionProjects = () => {
                   key={repo.id}
                   src={"/blank.png"}
                   alt={`repo ${repo.name}`}
-                  title={repo.name}
+                  title={
+                    repo.name.lenght < 16 ? repo.name : repo.name.slice(0, 16)
+                  }
                   Button={
                     <GitHubButton onClick={() => window.open(repo.html_url)}>
                       Ver Repositório
                     </GitHubButton>
                   }
                 >
-                  {repo.description}
+                  {repo.description || (
+                    <>
+                      <br></br>
+                      <br></br>
+                    </>
+                  )}
                 </ProjectCard>
               );
             })}
