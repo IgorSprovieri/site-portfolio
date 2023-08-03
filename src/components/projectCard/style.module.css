@@ -1,0 +1,54 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 250px;
+
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 30px;
+
+  margin: 16px;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.project-image {
+  border-radius: 20px;
+}
+
+.project-title {
+  font-size: 22px;
+  font-family: "JetBrains Mono", monospace;
+
+  margin: 16px 0px 4px 0px;
+  color: rgb(0, 115, 177);
+}
+
+.project-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0px 0px;
+  text-align: center;
+}
+
+.project-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: fit-content;
+  margin-top: 8px;
+}
+
+.project-buttons-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}

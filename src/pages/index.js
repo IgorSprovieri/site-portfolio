@@ -1,12 +1,25 @@
 import {
   AbilityCard,
+  Css,
+  Express,
+  Html,
   Icon,
+  Js,
   MenuButton,
   MyDescription,
   MyImage,
+  Node,
+  Postgres,
+  ProjectCard,
+  React,
   SmallIcon,
   SocialIcons,
+  StyledComponents,
   Title,
+  TypeORM,
+  Typescript,
+  Vercel,
+  WebsiteButton,
 } from "@/components";
 import { SectionAbilities, SectionDescription } from "@/sections";
 
@@ -44,181 +57,67 @@ export default function Home() {
 
         <section className="c-section c-section--scrollOnMobile">
           <div className="c-section__container c-section__container--scrollOnMobile">
-            <div className="c-project-box">
-              <img
-                className="c-project-box__image"
-                src="/weekly.png"
-                alt="Weekly"
-              />
-              <h3 className="c-h3 isBlue">Weekly</h3>
-              <p className="c-p c-p--little">
-                Weekly é um aplicativo web para gerenciar tarefas semanais
-              </p>
+            <ProjectCard
+              src="/weekly.png"
+              alt="Weekly"
+              title="Weekly"
+              Icons={
+                <>
+                  <Html></Html>
+                  <Css></Css>
+                  <Js></Js>
+                </>
+              }
+              Button={
+                <WebsiteButton onClick={() => window.open()}>
+                  Visitar Website
+                </WebsiteButton>
+              }
+            >
+              Weekly é um aplicativo web para gerenciar tarefas semanais
+            </ProjectCard>
 
-              <div className="c-project-box__tech-icons-container">
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/html.svg"
-                  alt="Html"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/css.svg"
-                  alt="Css"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/javascript.svg"
-                  alt="Javascript"
-                />
-              </div>
+            <ProjectCard
+              src="/supermarket-list.png"
+              alt="Supermarket List"
+              title="Supermarket List"
+              Icons={
+                <>
+                  <React></React>
+                  <StyledComponents></StyledComponents>
+                  <Vercel></Vercel>
+                </>
+              }
+              Button={
+                <WebsiteButton onClick={() => window.open()}>
+                  Visitar Website
+                </WebsiteButton>
+              }
+            >
+              Um web app para ajudar nas compras de supermercado
+            </ProjectCard>
 
-              <div className="c-project-box__icons">
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://weekly.ispapps.com/index.html')"
-                >
-                  <p className="c-p c-p--little">Visitar Website</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/link.svg"
-                    alt="Link de Produção"
-                  />
-                </button>
-
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://github.com/IgorSprovieri/weekly-api')"
-                >
-                  <p className="c-p c-p--little">Ver Repositório</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/Github.png"
-                    alt="Meu GitHub"
-                  />
-                </button>
-              </div>
-            </div>
-            <div className="c-project-box">
-              <img
-                className="c-project-box__image"
-                src="/supermarket-list.png"
-                alt="Weekly"
-              />
-              <h3 className="c-h3 isBlue">Supermarket List</h3>
-              <p className="c-p c-p--little">
-                Um web app para ajudar nas compras de supermercado
-              </p>
-
-              <div className="c-project-box__tech-icons-container">
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/react.svg"
-                  alt="React"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/styled-components.svg"
-                  alt="Styled Components"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="Assets/vercel.svg"
-                  alt="Vercel"
-                />
-              </div>
-
-              <div className="c-project-box__icons">
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://app.supermarket-list.ispapps.com')"
-                >
-                  <p className="c-p c-p--little">Visitar Website</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/link.svg"
-                    alt="Visitar Site Portfolio"
-                  />
-                </button>
-
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://github.com/IgorSprovieri/supermarket-list-web')"
-                >
-                  <p className="c-p c-p--little">Ver Repositório</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/Github.png"
-                    alt="Meu GitHub"
-                  />
-                </button>
-              </div>
-            </div>
-            <div className="c-project-box">
-              <img
-                className="c-project-box__image"
-                src="/Rest API.svg"
-                alt="Rest API"
-              />
-              <h3 className="c-h3 isBlue">Stock Controller</h3>
-              <p className="c-p c-p--little">
-                Uma api para controle de estoque de lojas, varejo, etc.
-              </p>
-
-              <div className="c-project-box__tech-icons-container">
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/node.svg"
-                  alt="Node"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/typescript.svg"
-                  alt="Typescript"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/postgres.svg"
-                  alt="Postgres"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/express.svg"
-                  alt="Express"
-                />
-                <img
-                  className="c-project-box__tech-icon"
-                  src="/type-orm.png"
-                  alt="Type ORM"
-                />
-              </div>
-
-              <div className="c-project-box__icons">
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://app.caninde.ispapps.com')"
-                >
-                  <p className="c-p c-p--little">Visitar Website</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/link.svg"
-                    alt="Link de Produção"
-                  />
-                </button>
-
-                <button
-                  className="c-button-reverse"
-                  onclick="openNewTab('https://github.com/IgorSprovieri/stock-controller-api')"
-                >
-                  <p className="c-p c-p--little">Ver Repositório</p>
-                  <img
-                    className="c-project-box__icon"
-                    src="/Github.png"
-                    alt="Meu GitHub"
-                  />
-                </button>
-              </div>
-            </div>
+            <ProjectCard
+              src="/Rest API.svg"
+              alt="Rest API"
+              title="Stock Controller"
+              Icons={
+                <>
+                  <Node></Node>
+                  <Typescript></Typescript>
+                  <Postgres></Postgres>
+                  <Express></Express>
+                  <TypeORM></TypeORM>
+                </>
+              }
+              Button={
+                <WebsiteButton onClick={() => window.open()}>
+                  Visitar Website
+                </WebsiteButton>
+              }
+            >
+              Uma api para controle de estoque de lojas, varejo, etc.
+            </ProjectCard>
           </div>
         </section>
 

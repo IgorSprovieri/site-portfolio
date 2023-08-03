@@ -4,9 +4,8 @@
 }
 
 .paragraph-little {
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
-}
-
-.paragraph-gray {
-  color: gray;
+  margin: 0px 0px;
+  text-align: center;
 }

@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import styles from "./style.module.css";
+import Image from "next/image";
 
 export const Button = ({ children, onClick }) => {
   return (
@@ -49,5 +50,23 @@ export const SwitchButton = ({ texts, value, setValue }) => {
         {texts[1]}
       </button>
     </div>
+  );
+};
+
+export const WebsiteButton = ({ children, onClick }) => {
+  return (
+    <button className={styles["icon-button"]} onClick={onClick}>
+      <p className={styles["icon-button-text"]}>{children}</p>
+      <Image src="/link.svg" alt="Abrir Website" width={24} height={24} />
+    </button>
+  );
+};
+
+export const GitHubButton = ({ children, onClick }) => {
+  return (
+    <button className={styles["icon-button"]} onClick={onClick}>
+      <p className={styles["icon-button-text"]}>{children}</p>
+      <Image src="/Github.png" alt="GitHub" width={24} height={24} />
+    </button>
   );
 };
