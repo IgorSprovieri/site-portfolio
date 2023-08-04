@@ -16,23 +16,39 @@ import {
   WebsiteButton,
   Window,
 } from "@/components";
+import { MarkdownRender } from "@/components/markdownRender";
 import { useState } from "react";
 
 export const Projects = () => {
-  const [embeddedUrl, setEmbeddedUrl] = useState(0);
+  const [url, setUrl] = useState(0);
+  const [isIframe, setIsIframe] = useState(true);
   const [openWindow, setOpenWindow] = useState(0);
   const [windowTitle, setWindowTitle] = useState("");
 
-  return (
-    <>
+  const Iframe = () => {
+    return (
       <BigWindow open={openWindow} setOpen={setOpenWindow} title={windowTitle}>
         <iframe
-          src={embeddedUrl}
+          src={url}
           title="Embedded Site"
           width="100%"
           height="100%"
         ></iframe>
       </BigWindow>
+    );
+  };
+
+  const Repo = () => {
+    return (
+      <Window open={openWindow} setOpen={setOpenWindow} title={windowTitle}>
+        <MarkdownRender url={url}></MarkdownRender>
+      </Window>
+    );
+  };
+
+  return (
+    <>
+      {isIframe === true ? <Iframe></Iframe> : <Repo></Repo>}
       <ProjectCard
         src="/weekly.png"
         alt="Weekly"
@@ -47,8 +63,9 @@ export const Projects = () => {
         Button={
           <WebsiteButton
             onClick={() => {
-              setEmbeddedUrl("https://weekly.ispapps.com/src/pages/index.html");
+              setUrl("https://weekly.ispapps.com/src/pages/index.html");
               setWindowTitle("Weekly");
+              setIsIframe(true);
               setOpenWindow(true);
             }}
           >
@@ -72,8 +89,9 @@ export const Projects = () => {
         Button={
           <WebsiteButton
             onClick={() => {
-              setEmbeddedUrl("https://app.supermarket-list.ispapps.com");
+              setUrl("https://app.supermarket-list.ispapps.com");
               setWindowTitle("Supermarket List");
+              setIsIframe(true);
               setOpenWindow(true);
             }}
           >
@@ -99,10 +117,11 @@ export const Projects = () => {
         Button={
           <GitHubButton
             onClick={() => {
-              setEmbeddedUrl(
-                "https://github.com/IgorSprovieri/stock-controller-api"
+              setUrl(
+                "https://api.github.com/repos/IgorSprovieri/stock-controller-api/contents/readme.md"
               );
-              setWindowTitle("Stock Controller Api");
+              setWindowTitle("Readme");
+              setIsIframe(false);
               setOpenWindow(true);
             }}
           >
