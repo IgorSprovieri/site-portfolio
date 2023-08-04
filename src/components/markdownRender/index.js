@@ -2,6 +2,8 @@ import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useQuery } from "react-query";
 import axios from "axios";
+import rehypeRaw from "rehype-raw";
+import styles from "./style.module.css";
 
 export const MarkdownRender = ({ url }) => {
   const [markdown, setMarkdown] = useState("");
@@ -19,5 +21,12 @@ export const MarkdownRender = ({ url }) => {
     }
   );
 
-  return <ReactMarkdown>{markdown}</ReactMarkdown>;
+  return (
+    <ReactMarkdown
+      className={styles.markdownContainer}
+      rehypePlugins={[rehypeRaw]}
+    >
+      {markdown}
+    </ReactMarkdown>
+  );
 };

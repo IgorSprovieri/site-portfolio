@@ -18,6 +18,7 @@
     "react-markdown": "^8.0.7",
     "react-query": "^3.39.3",
     "react-scroll": "^1.8.9",
-    "react-typewriter": "^0.4.1"
+    "react-typewriter": "^0.4.1",
+    "rehype-raw": "^6.1.1"
   }
 }
