@@ -28,6 +28,7 @@ import {
   SectionExperiences,
   SectionProjects,
 } from "@/sections";
+import { SectionFrag } from "@/sections/sectionFrag";
 
 export default function Home() {
   return (
@@ -77,11 +78,7 @@ export default function Home() {
           name={"section-frag-components"}
         ></Title>
 
-        <section className="c-section">
-          <section className="c-section__container">
-            <div className="c-frag-container"></div>
-          </section>
-        </section>
+        <SectionFrag></SectionFrag>
       </main>
       <footer className="c-footer">
         <section className="c-my-name">

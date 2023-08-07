@@ -1,0 +1,36 @@
+.section-frag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-bottom: 120px;
+  height: calc(100vh - 430px);
+}
+
+.frag-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.frag-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  box-shadow: -2px 2px 5px rgb(180, 180, 180);
+}
+
+.section-description {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  width: 420px;
+  margin-left: 32px;
+}
