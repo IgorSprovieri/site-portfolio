@@ -3,9 +3,6 @@ import { GitHubButton, IconButton } from "../buttons";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { Window } from "../window";
-import ReactMarkdown from "react-markdown";
-import { useQuery } from "react-query";
-import axios from "axios";
 import { MarkdownRender } from "../markdownRender";
 
 export const ProjectCard = ({ src, alt, title, children, Button, Icons }) => {

@@ -25,6 +25,7 @@ import {
 import {
   SectionAbilities,
   SectionDescription,
+  SectionExperiences,
   SectionProjects,
 } from "@/sections";
 
@@ -68,54 +69,7 @@ export default function Home() {
           name={"section-experiences"}
         ></Title>
 
-        <section className="c-section">
-          <div className="c-experience-box">
-            <h3 className="c-h3 isBlue">
-              Freelancer - Desenvolvedor Fullstack
-            </h3>
-            <h4 className="c-h4">MAR 2023</h4>
-            <p className="c-p">
-              Desenvolvo trabalhos autônomos usando React, Next, Typescript e
-              Node
-            </p>
-          </div>
-          <div className="c-experience-box">
-            <h3 className="c-h3 isBlue">Mapa da Programação - Tutor</h3>
-            <h4 className="c-h4">FEV 2023</h4>
-            <p className="c-p">
-              Dou tutoria aos alunos nos cursos da empresa com foco em React e
-              Node
-            </p>
-          </div>
-          <div className="c-experience-box">
-            <h3 className="c-h3 isBlue">
-              Sprovieri Games - Desenvolvedor Unity C#
-            </h3>
-            <h4 className="c-h4">JAN 2020 - AGO 2022</h4>
-            <p className="c-p">
-              Desenvolvi em equipe 14 jogos autorais e de terceiros para
-              diversas plataformas como: Steam, Nintendo Switch e Google Play
-            </p>
-          </div>
-          <div className="c-experience-box">
-            <h3 className="c-h3 isBlue">Crie Seus Jogos - Tutor e Redator</h3>
-            <h4 className="c-h4">JUN 2020 - SET 2021</h4>
-            <p className="c-p">
-              Atuei como tutor e redatei artigos semanais sobre programação de
-              jogos no site crieseusjogos.com
-            </p>
-          </div>
-          <div className="c-experience-box">
-            <h3 className="c-h3 isBlue">
-              Pinel Games - Desenvolvedor Unity C#
-            </h3>
-            <h4 className="c-h4">SET 2020 - DEZ 2020</h4>
-            <p className="c-p">
-              Atuei como desenvolvedor Unity em 2 jogos da empresa, testando,
-              corrigindo bugs e desenvolvendo as principais mecânicas
-            </p>
-          </div>
-        </section>
+        <SectionExperiences></SectionExperiences>
 
         <Title
           firstText={"Frag"}
