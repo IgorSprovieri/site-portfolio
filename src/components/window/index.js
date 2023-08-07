@@ -9,8 +9,10 @@ export const Window = ({ children, title, open, setOpen }) => {
   };
 
   useEffect(() => {
-    setBodyScroll("hidden");
-  }, []);
+    if (open === true) {
+      setBodyScroll("hidden");
+    }
+  }, [open]);
 
   return (
     <>
@@ -44,8 +46,10 @@ export const BigWindow = ({ children, title, open, setOpen }) => {
   };
 
   useEffect(() => {
-    setBodyScroll("hidden");
-  }, []);
+    if (open === true) {
+      setBodyScroll("hidden");
+    }
+  }, [open]);
 
   return (
     <>

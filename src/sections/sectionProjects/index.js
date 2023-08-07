@@ -6,13 +6,12 @@ import {
 } from "@/components";
 import { Projects } from "./projects";
 import styles from "./style.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 
 export const SectionProjects = () => {
   const [windowOpen, setWindowOpen] = useState(false);
-  const [repos, setRepos] = useState([]);
   const { data } = useQuery("repos", async () => {
     return await axios.get(`https://api.github.com/users/IgorSprovieri/repos`, {
       headers: {
