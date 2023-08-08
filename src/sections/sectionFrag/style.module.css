@@ -34,3 +34,17 @@
   width: 420px;
   margin-left: 32px;
 }
+
+.frag-about-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.frag-about-container h2 {
+  margin-bottom: 8px;
+  margin-top: 32px;
+}
+
+.frag-about-container li {
+  margin-bottom: 12px;
+}
