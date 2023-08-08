@@ -4,6 +4,7 @@ import styles from "./style.module.css";
 import Image from "next/image";
 import { Window } from "../window";
 import { MarkdownRender } from "../markdownRender";
+import { RepositoryImage } from "../images";
 
 export const ProjectCard = ({ src, alt, title, children, Button, Icons }) => {
   return (
@@ -36,15 +37,15 @@ export const RepositoryCard = ({ repo }) => {
         ></MarkdownRender>
       </Window>
       <div className={styles["project-container"]}>
-        <Image
-          className={styles["project-image"]}
-          src={"/blank.png"}
-          alt={`repo ${repo.name}`}
-          width={250}
-          height={120}
-        />
+        <RepositoryImage language={repo.language}>
+          {repo.name.lenght < 16
+            ? repo.name.replaceAll("-", " ")
+            : repo.name.slice(0, 16).replaceAll("-", " ")}
+        </RepositoryImage>
         <h3 className={styles["project-title"]}>
-          {repo.name.lenght < 16 ? repo.name : repo.name.slice(0, 16)}
+          {repo.name.lenght < 16
+            ? repo.name.replaceAll("-", " ")
+            : repo.name.slice(0, 16).replaceAll("-", " ")}
         </h3>
         <p className={styles["project-paragraph"]}>
           {" "}

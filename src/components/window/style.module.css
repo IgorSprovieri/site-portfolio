@@ -12,6 +12,7 @@
 
   background-color: rgba(0, 0, 0, 0.209);
   animation: 0.5s forwards fadeIn;
+  z-index: 100;
 }
 
 .window-container {
