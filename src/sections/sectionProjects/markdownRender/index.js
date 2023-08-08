@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ReactMarkdown } from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import { useQuery } from "react-query";
 import axios from "axios";
 import rehypeRaw from "rehype-raw";
