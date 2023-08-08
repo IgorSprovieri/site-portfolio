@@ -35,3 +35,23 @@
   box-shadow: -2px 2px 5px #9f9f9f;
   width: calc(100% - 64px);
 }
+
+@media only screen and (max-device-width: 480px) {
+  .markdownContainer {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .markdownContainer pre {
+    margin-left: 8px;
+    width: calc(100% - 42px);
+  }
+
+  .markdownContainer p {
+    font-size: 16px;
+  }
+
+  .markdownContainer h2 {
+    font-size: 22px;
+  }
+}

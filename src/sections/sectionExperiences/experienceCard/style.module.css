@@ -31,3 +31,9 @@
   margin-top: 8px;
   margin-bottom: 0px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .experience-container {
+    width: calc(100% - 64px);
+  }
+}

@@ -26,3 +26,16 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-device-width: 480px) {
+  .abilities-section {
+    margin-top: 24px;
+    height: calc(100dvh - 200px);
+    padding-bottom: 16px;
+    justify-content: space-between;
+  }
+
+  .abilities-container {
+    flex-wrap: wrap;
+  }
+}

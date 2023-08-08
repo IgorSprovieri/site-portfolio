@@ -5,3 +5,4 @@ export * from "./sectionExperiences";
 export * from "./sectionFrag";
 export * from "./header";
 export * from "./footer";
+export * from "./title";

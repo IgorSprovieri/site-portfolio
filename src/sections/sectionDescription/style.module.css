@@ -20,10 +20,50 @@
   margin-right: 50px;
 }
 
-.description-title {
-  font-size: 40px;
-  font-family: "JetBrains Mono", monospace;
+.description-section h1 {
   line-height: 46px;
-  margin: 0px;
   height: 90px;
+}
+
+.description-section img {
+  border: 5px solid rgb(0, 115, 177);
+  border-radius: 50px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .description-section {
+    height: 100dvh;
+    width: 100dvw;
+    scroll-snap-align: start;
+  }
+
+  .description-section-container {
+    flex-direction: column-reverse;
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: calc(100dvw - 48px);
+    margin: 0px;
+  }
+
+  .description-section p {
+    text-align: center;
+  }
+
+  .description-section h1 {
+    line-height: 32px;
+    height: 64px;
+    margin-top: 16px;
+    width: calc(100% - 14px);
+  }
+
+  .description-section img {
+    width: 200px;
+    height: 200px;
+  }
 }

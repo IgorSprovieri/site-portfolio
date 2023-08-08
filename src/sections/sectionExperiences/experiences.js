@@ -1,4 +1,4 @@
-import { ExperienceCard } from "@/components/experienceCard";
+import { ExperienceCard } from "./experienceCard";
 
 export const Experiences = () => {
   return (

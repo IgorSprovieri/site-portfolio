@@ -48,3 +48,28 @@
 .frag-about-container li {
   margin-bottom: 12px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .section-frag {
+    height: calc(100dvh - 230px);
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-bottom: 120px;
+  }
+
+  .section-description {
+    font-size: 18px;
+    width: calc(100% - 16px);
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .frag-container {
+    flex-direction: column;
+  }
+
+  .frag-about-container img {
+    width: 100%;
+    height: auto;
+  }
+}

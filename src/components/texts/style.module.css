@@ -21,3 +21,17 @@
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .h1 {
+    font-size: 26px;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+}

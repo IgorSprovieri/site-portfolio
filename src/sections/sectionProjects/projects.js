@@ -7,7 +7,6 @@ import {
   Js,
   Node,
   Postgres,
-  ProjectCard,
   React,
   StyledComponents,
   TypeORM,
@@ -16,7 +15,8 @@ import {
   WebsiteButton,
   Window,
 } from "@/components";
-import { MarkdownRender } from "@/components/markdownRender";
+import { ProjectCard } from "./projectCard";
+import { MarkdownRender } from "./markdownRender";
 import { useState } from "react";
 
 export const Projects = () => {

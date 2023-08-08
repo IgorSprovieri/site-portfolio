@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./style.module.css";
 import TypeWriter from "react-typewriter";
+import { H1, IsBlue } from "@/components";
 
 export const Title = ({ firstText, secondText, name }) => {
   const [isIntersecting, setIsIntersecting] = useState();
@@ -17,23 +18,25 @@ export const Title = ({ firstText, secondText, name }) => {
   }, []);
 
   return (
-    <section ref={ref} className={styles["title-container"]} name={name}>
-      <h1 className={styles["title-text"]}>
+    <section ref={ref} className={styles["title-section"]} name={name}>
+      <H1>
         {"{"}
         {isIntersecting ? (
           <TypeWriter typing={1}>{firstText}</TypeWriter>
         ) : (
           <></>
         )}
-      </h1>
-      <h1 className={styles["title-text-blue"]}>
-        {isIntersecting ? (
-          <TypeWriter typing={1}>{secondText}</TypeWriter>
-        ) : (
-          <></>
-        )}
-        {"}"}
-      </h1>
+      </H1>
+      <H1>
+        <IsBlue>
+          {isIntersecting ? (
+            <TypeWriter typing={1}>{secondText}</TypeWriter>
+          ) : (
+            <></>
+          )}
+          {"}"}
+        </IsBlue>
+      </H1>
     </section>
   );
 };

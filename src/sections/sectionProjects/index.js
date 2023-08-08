@@ -1,9 +1,10 @@
-import { GitHubButton, RepositoryCard, Window } from "@/components";
+import { GitHubButton, Window } from "@/components";
 import { Projects } from "./projects";
 import styles from "./style.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
+import { RepositoryCard } from "./projectCard";
 
 export const SectionProjects = () => {
   const ignoreRepos = process.env.NEXT_PUBLIC_IGNORE_REPOS.split(",");

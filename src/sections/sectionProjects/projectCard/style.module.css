@@ -29,7 +29,7 @@
 .project-paragraph {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  margin: 0px 0px;
+  margin: 0px;
   text-align: center;
 }
 
@@ -51,4 +51,27 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.repository-paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0px;
+  text-align: center;
+  height: 58px;
+}
+
+.repository-buttons-container {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .project-container {
+    scroll-snap-align: center;
+  }
 }

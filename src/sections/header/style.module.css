@@ -19,3 +19,9 @@
   padding: 0px;
   width: 500px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .header {
+    display: none;
+  }
+}

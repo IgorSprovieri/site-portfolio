@@ -1,0 +1,24 @@
+.title-section {
+  padding: 160px 0px 40px 0px;
+  text-align: center;
+  height: 92px;
+}
+
+.title-section h1 {
+  line-height: 46px;
+  margin: 0px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .title-section {
+    padding: 0pc;
+    margin: 64px 0px 0px 0px;
+    width: 100%;
+  }
+
+  .title-section h1 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

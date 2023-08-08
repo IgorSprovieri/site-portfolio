@@ -32,4 +32,15 @@
 }
 
 @media only screen and (max-device-width: 480px) {
+  .c-body {
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+  }
+
+  .c-main {
+    width: 100dvw;
+    padding-top: 32px;
+    overflow-x: hidden;
+  }
 }

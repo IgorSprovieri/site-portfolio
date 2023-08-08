@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { GitHubButton, IconButton } from "../buttons";
+import { GitHubButton } from "../../../components/buttons";
 import styles from "./style.module.css";
 import Image from "next/image";
-import { Window } from "../window";
+import { Window } from "../../../components/window";
 import { MarkdownRender } from "../markdownRender";
-import { RepositoryImage } from "../images";
+import { RepositoryImage } from "../../../components/images";
 
 export const ProjectCard = ({ src, alt, title, children, Button, Icons }) => {
   return (
@@ -47,7 +47,7 @@ export const RepositoryCard = ({ repo }) => {
             ? repo.name.replaceAll("-", " ")
             : repo.name.slice(0, 16).replaceAll("-", " ")}
         </h3>
-        <p className={styles["project-paragraph"]}>
+        <p className={styles["repository-paragraph"]}>
           {" "}
           {repo.description || (
             <>
@@ -57,7 +57,7 @@ export const RepositoryCard = ({ repo }) => {
           )}
         </p>
 
-        <div className={styles["project-buttons-container"]}>
+        <div className={styles["repository-buttons-container"]}>
           <GitHubButton onClick={() => setOpenWindow(true)}>
             Ver Readme
           </GitHubButton>

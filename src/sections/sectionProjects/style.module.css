@@ -26,3 +26,16 @@
   width: 310px;
   margin-right: 16px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .projects-section {
+    height: calc(100dvh - 200px);
+  }
+
+  .projects-container {
+    justify-content: flex-start;
+    width: 100dvw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+}

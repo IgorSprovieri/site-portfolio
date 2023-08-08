@@ -92,3 +92,24 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-device-width: 480px) {
+  .window-container {
+    width: calc(100dvw - 36px);
+    height: calc(100dvh - 36px);
+    padding: 16px;
+  }
+
+  .big-window-container {
+    width: 100dvw;
+    height: 100dvh;
+    padding: 0px;
+    border-radius: 0px;
+  }
+
+  .big-window-header {
+    padding: 16px;
+    padding-bottom: 0px;
+    width: calc(100% - 32px);
+  }
+}

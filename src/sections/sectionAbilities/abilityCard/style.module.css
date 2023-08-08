@@ -1,4 +1,4 @@
-.ability-content-container {
+.ability-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +8,12 @@
   margin: 20px;
 }
 
-.ability-paragraph {
+.ability-card p {
   font-family: "JetBrains Mono", monospace;
   font-size: 14px;
 }
 
-.ability-icons-container {
+.ability-card-icons {
   display: flex;
   flex-direction: center;
   align-items: center;
@@ -29,7 +29,7 @@
   box-shadow: -2px 2px 5px rgb(180, 180, 180);
 }
 
-.ability-icons-container:hover {
+.ability-card-icons:hover {
   animation: pingPong 1.5s infinite;
 }
 
@@ -42,5 +42,15 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .ability-card {
+    margin: 8px;
+  }
+
+  .ability-card-icons:hover {
+    animation: none;
   }
 }

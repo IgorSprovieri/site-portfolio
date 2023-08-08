@@ -1,4 +1,3 @@
-import { MenuButton, SocialIcons, Title } from "@/components";
 import {
   SectionAbilities,
   SectionDescription,
@@ -7,6 +6,7 @@ import {
   SectionFrag,
   Header,
   Footer,
+  Title,
 } from "@/sections";
 
 export default function Home() {

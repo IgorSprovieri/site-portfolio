@@ -1,5 +1,5 @@
-import { AbilityCard } from "../../components/abilityCard";
-import { Icon, SmallIcon } from "../../components/images";
+import { AbilityCard } from "./abilityCard";
+import { Icon, SmallIcon } from "@/components";
 import styles from "./style.module.css";
 
 export const Backend = () => {
