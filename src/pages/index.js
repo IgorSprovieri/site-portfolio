@@ -1,50 +1,18 @@
-import {
-  AbilityCard,
-  Css,
-  Express,
-  GitHubButton,
-  Html,
-  Icon,
-  Js,
-  MenuButton,
-  MyDescription,
-  MyImage,
-  Node,
-  Postgres,
-  ProjectCard,
-  React,
-  SmallIcon,
-  SocialIcons,
-  StyledComponents,
-  Title,
-  TypeORM,
-  Typescript,
-  Vercel,
-  WebsiteButton,
-} from "@/components";
+import { MenuButton, SocialIcons, Title } from "@/components";
 import {
   SectionAbilities,
   SectionDescription,
   SectionExperiences,
   SectionProjects,
+  SectionFrag,
+  Header,
+  Footer,
 } from "@/sections";
-import { SectionFrag } from "@/sections/sectionFrag";
 
 export default function Home() {
   return (
     <>
-      <header className="c-header">
-        <menu className="c-menu">
-          <MenuButton scrollTo={"section-home"}>Home</MenuButton>
-          <MenuButton scrollTo={"section-abilities"}>Habilidades</MenuButton>
-          <MenuButton scrollTo={"section-portfolio"}>Portfólio</MenuButton>
-          <MenuButton scrollTo={"section-experiences"}>Experiências</MenuButton>
-          <MenuButton scrollTo={"section-frag-components"}>
-            Frag Components
-          </MenuButton>
-        </menu>
-        <SocialIcons></SocialIcons>
-      </header>
+      <Header></Header>
       <main className="c-main" name="section-home">
         <SectionDescription></SectionDescription>
 
@@ -80,12 +48,7 @@ export default function Home() {
 
         <SectionFrag></SectionFrag>
       </main>
-      <footer className="c-footer">
-        <section className="c-my-name">
-          <h2 className="c-h2 isBlue">Igor Sprovieri</h2>
-        </section>
-        <SocialIcons></SocialIcons>
-      </footer>
+      <Footer></Footer>
     </>
   );
 }

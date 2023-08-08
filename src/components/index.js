@@ -7,3 +7,4 @@ export * from "./abilityCard";
 export * from "./projectCard";
 export * from "./techIcons";
 export * from "./window";
+export * from "./lists";

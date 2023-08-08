@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  padding-right: 32px;
+  background-color: rgb(230, 230, 230);
+  position: fixed;
+  top: 0;
+  width: calc(100% - 48px);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 500px;
+}

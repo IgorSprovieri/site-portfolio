@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0px;
+  background-color: rgb(230, 230, 230);
+}
+
+.footer h2 {
+  font-size: 24px;
+}
