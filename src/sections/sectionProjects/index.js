@@ -1,9 +1,4 @@
-import {
-  GitHubButton,
-  ProjectCard,
-  RepositoryCard,
-  Window,
-} from "@/components";
+import { GitHubButton, RepositoryCard, Window } from "@/components";
 import { Projects } from "./projects";
 import styles from "./style.module.css";
 import { useEffect, useState } from "react";
@@ -11,6 +6,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 export const SectionProjects = () => {
+  const ignoreRepos = process.env.NEXT_PUBLIC_IGNORE_REPOS.split(",");
   const [windowOpen, setWindowOpen] = useState(false);
   const { data } = useQuery("repos", async () => {
     return await axios.get(`https://api.github.com/users/IgorSprovieri/repos`, {
@@ -29,10 +25,19 @@ export const SectionProjects = () => {
       >
         <div className={styles["list-repos-container"]}>
           {data?.data
-            ?.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+            ?.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
             ?.map((repo) => {
-              return (
+              let ignoreRepo = false;
+              ignoreRepos.forEach((ignoreRepoName) => {
+                if (repo.name === ignoreRepoName) {
+                  ignoreRepo = true;
+                }
+              });
+
+              return ignoreRepo === false ? (
                 <RepositoryCard key={repo.id} repo={repo}></RepositoryCard>
+              ) : (
+                <></>
               );
             })}
         </div>
