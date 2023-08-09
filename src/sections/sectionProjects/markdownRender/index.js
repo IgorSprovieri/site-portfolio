@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { useQuery } from "react-query";
 import axios from "axios";
 import rehypeRaw from "rehype-raw";
 import styles from "./style.module.css";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export const MarkdownRender = ({ url }) => {
   const [markdown, setMarkdown] = useState("");
