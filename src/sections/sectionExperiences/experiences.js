@@ -4,39 +4,43 @@ export const Experiences = () => {
   return (
     <>
       {" "}
-      <ExperienceCard
-        title="Freelancer - Desenvolvedor Fullstack"
-        period={"MAR 2023"}
-      >
-        Desenvolvo trabalhos autônomos usando React, Next, Typescript, Node,
-        TypeORM, Postgres e Mongo. Para deploy uso Railway e Vercel.
+      <ExperienceCard title="Mapa da Programação - Tutor" period={"FEV 2023"}>
+        Dou tutoria aos alunos nos cursos da empresa sobre desenvolvimento web e
+        mobile. Tenho aprendido a ensinar e ter paciência com quem está
+        iniciando.
       </ExperienceCard>
-      <ExperienceCard title="Seven Class - Tutor" period={"FEV 2023"}>
-        Dou tutoria no curso Mapa da Programação em áreas como: Lógica de
-        Programação, JavaScript, HTML, CSS, React, SQL, Docker, Node, Postgres,
-        Mongo, Mongoose, Sequelize e AWS
+      <ExperienceCard
+        title="Voluntariado - Desenvolvedor Fullstack"
+        period={"FEV 2023"}
+      >
+        Desenvolvi um site de inscrição para eventos para a Igreja Cristã
+        Maranata e um sistema auxiliar de gestão para o Auto Posto Canindé. As
+        tecnologias utilizadas foram: React, Next, Styled Components, Express,
+        TypeORM, mongo e postgres.
       </ExperienceCard>
       <ExperienceCard
         title="Sprovieri Games - Desenvolvedor Unity C#"
         period={"JAN 2020 - AGO 2022"}
       >
         Desenvolvi em equipe 14 jogos autorais e de terceiros para diversas
-        plataformas como: Steam, Nintendo Switch e Google Play
+        plataformas como: Steam, Nintendo Switch e Google Play. Aprendi a
+        trabalhar em equipe, cumprir metas e lidar com prazo.
       </ExperienceCard>
       <ExperienceCard
         title="Crie Seus Jogos - Tutor e Redator"
         period={"JUN 2020 - SET 2021"}
       >
-        Atuei como tutor em cursos sobre Unity C# e redatei artigos semanais
-        sobre programação de jogos no site crieseusjogos.com
+        Atuei como tutor com foco em Unity C# nos cursos da empresa e redatei
+        artigos semanais sobre programação de jogos no site crieseusjogos.com.
       </ExperienceCard>
       <ExperienceCard
         title="Pinel Games - Desenvolvedor Unity C#"
         period={"SET 2020 - DEZ 2020"}
       >
-        Atuei como desenvolvedor Unity em 2 jogos da empresa. A minha funcão era
-        testar, corrigir bugs, otimizar códigos e desenvolver as principais
-        mecânicas.
+        Atuei como desenvolvedor Unity em 2 jogos da empresa, testando,
+        corrigindo bugs e desenvolvendo as principais mecânicas. Coloquei em
+        prática a habilidade de procurar por soluções fazendo testes, lendo
+        documentações e pesquisando.
       </ExperienceCard>
     </>
   );
