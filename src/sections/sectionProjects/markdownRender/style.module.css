@@ -22,6 +22,11 @@
   margin-top: 32px;
 }
 
+.markdownContainer img {
+  width: calc(100% - 16px);
+  border-radius: 16px;
+}
+
 .markdownContainer ol {
   margin: 0px;
 }
