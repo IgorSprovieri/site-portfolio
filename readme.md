@@ -14,6 +14,10 @@ This project was deployed with Vercel:
 https://portfolio.ispapps.com
 ```
 
+## Preview
+
+![Preview](./public/preview.png)
+
 ## Libraries
 
 I used also libraries to help development:
