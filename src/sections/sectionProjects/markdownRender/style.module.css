@@ -1,7 +1,8 @@
 .markdownContainer {
   font-family: "JetBrains Mono", monospace;
   align-items: left;
-  padding-left: 16px;
+  padding-left: 8px;
+  width: calc(100% - 8px);
 }
 
 .markdownContainer h1 {
@@ -39,6 +40,7 @@
   margin-bottom: 32px;
   box-shadow: -2px 2px 5px #9f9f9f;
   width: calc(100% - 64px);
+  margin-left: 8px;
 }
 
 @media only screen and (max-device-width: 480px) {
