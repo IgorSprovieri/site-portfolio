@@ -3,7 +3,7 @@ import { GitHubButton } from "../../../components/buttons";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { Window } from "../../../components/window";
-import { MarkdownRender } from "../markdownRender";
+import { MarkdownRender } from "../../../components/markdownRender";
 import { RepositoryImage } from "../../../components/images";
 
 export const ProjectCard = ({ src, alt, title, children, Button, Icons }) => {

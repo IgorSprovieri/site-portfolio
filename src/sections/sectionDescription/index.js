@@ -43,12 +43,10 @@ export const SectionDescription = () => {
             )}
           </H1>
           <Paragraph>
-            Programador desde 2013, comecei desenvolvendo jogos com a Unity,
-            onde em 2020 eu abri meu estúdio de jogos e até 2022 desenvolvi 14
-            projetos em equipe, autorais e de terceiros. Também fui redator por
-            mais de um ano do site crieseusjogos.com.br. Após esse período,
-            comecei a me dedicar ao desenvolvimento web e hoje atuo como
-            desenvolvedor fullstack com React, Next, Typescript e Node.
+            Após atuar 3 anos como desenvolvedor Unity C#, migrei para a área de
+            desenvolvimento web e atualmente tenho conhecimento Fullstack.
+            Também tenho uma biblioteca para criação páginas web, inspirada em
+            React, chamada Frag Components.
           </Paragraph>
           <Button
             onClick={() => window.open("https://wa.me/message/AQZS3NOUQULWL1")}

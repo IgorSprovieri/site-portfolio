@@ -14,9 +14,9 @@ import {
   Vercel,
   WebsiteButton,
   Window,
+  MarkdownRender,
 } from "@/components";
 import { ProjectCard } from "./projectCard";
-import { MarkdownRender } from "./markdownRender";
 import { useState } from "react";
 
 export const Projects = () => {

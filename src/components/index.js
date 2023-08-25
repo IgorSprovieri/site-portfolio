@@ -6,3 +6,4 @@ export * from "./techIcons";
 export * from "./window";
 export * from "./lists";
 export * from "./generic";
+export * from "./markdownRender";

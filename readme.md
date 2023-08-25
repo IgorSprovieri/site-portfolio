@@ -16,7 +16,7 @@ https://portfolio.ispapps.com
 
 ## Preview
 
-![Preview](./public/preview.png)
+![Preview](./public/preview-repo.png)
 
 ## Libraries
 

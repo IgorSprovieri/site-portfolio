@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.css";
-import { Button, Window } from "@/components";
+import { Button, MarkdownRender, Window } from "@/components";
 import { useState } from "react";
 import { AboutFrag } from "./aboutFrag";
 
@@ -14,7 +14,11 @@ export const SectionFrag = () => {
         open={windowOpen}
         setOpen={setWindowOpen}
       >
-        <AboutFrag></AboutFrag>
+        <MarkdownRender
+          url={
+            "https://api.github.com/repos/IgorSprovieri/create-frag-app/contents/readme.md"
+          }
+        ></MarkdownRender>
       </Window>
       <div className={styles["frag-container"]}>
         <div className={styles["frag-image-container"]}>
@@ -26,9 +30,10 @@ export const SectionFrag = () => {
           ></Image>
         </div>
         <p className={styles["section-description"]}>
-          Frag Components é um framework que estou desenvolvendo com foco em SSR
-          (Server Side Render) para a criação de MPA&apos;s (Multi Page
-          Aplications) através de componentes HTML reutilizáveis
+          Frag Components é uma biblioteca para criação de páginas web que
+          utiliza template strings para criação de componentes HTML. A partir da
+          versão 1.0.x contará com um gerenciador de estados inspirado ao React
+          como useState e useEffect.
         </p>
       </div>
       <Button onClick={() => setWindowOpen(true)}>Conhecer o Projeto</Button>
