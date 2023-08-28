@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "./style.module.css";
 import { Button, MarkdownRender, Window } from "@/components";
 import { useState } from "react";
-import { AboutFrag } from "./aboutFrag";
 
 export const SectionFrag = () => {
   const [windowOpen, setWindowOpen] = useState(false);

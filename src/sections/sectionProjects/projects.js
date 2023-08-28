@@ -50,7 +50,7 @@ export const Projects = () => {
     <>
       {isIframe === true ? <Iframe></Iframe> : <Repo></Repo>}
       <ProjectCard
-        src="/weekly.png"
+        src="/projects/weekly-web.svg"
         alt="Weekly"
         title="Weekly"
         Icons={
@@ -76,7 +76,7 @@ export const Projects = () => {
         Weekly é um aplicativo web para gerenciar tarefas semanais
       </ProjectCard>
       <ProjectCard
-        src="/supermarket-list.png"
+        src="/projects/supermarket-list-web.svg"
         alt="Supermarket List"
         title="Supermarket List"
         Icons={
@@ -102,8 +102,8 @@ export const Projects = () => {
         Um web app para ajudar nas compras de supermercado
       </ProjectCard>
       <ProjectCard
-        src="/Rest API.svg"
-        alt="Rest API"
+        src="/projects/stock-controller-api.svg"
+        alt="Stock Controller"
         title="Stock Controller"
         Icons={
           <>
