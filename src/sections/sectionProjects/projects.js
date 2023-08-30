@@ -16,39 +16,19 @@ import {
   Window,
   MarkdownRender,
 } from "@/components";
-import { ProjectCard } from "./projectCard";
+import { ProjectCard } from "../../components/projectCard";
 import { useState } from "react";
 
 export const Projects = () => {
   const [url, setUrl] = useState(0);
-  const [isIframe, setIsIframe] = useState(true);
   const [openWindow, setOpenWindow] = useState(0);
   const [windowTitle, setWindowTitle] = useState("");
 
-  const Iframe = () => {
-    return (
-      <BigWindow open={openWindow} setOpen={setOpenWindow} title={windowTitle}>
-        <iframe
-          src={url}
-          title="Embedded Site"
-          width="100%"
-          height="100%"
-        ></iframe>
-      </BigWindow>
-    );
-  };
-
-  const Repo = () => {
-    return (
+  return (
+    <>
       <Window open={openWindow} setOpen={setOpenWindow} title={windowTitle}>
         <MarkdownRender url={url}></MarkdownRender>
       </Window>
-    );
-  };
-
-  return (
-    <>
-      {isIframe === true ? <Iframe></Iframe> : <Repo></Repo>}
       <ProjectCard
         src="/projects/weekly-web.svg"
         alt="Weekly"
@@ -63,9 +43,10 @@ export const Projects = () => {
         Button={
           <WebsiteButton
             onClick={() => {
-              setUrl("https://weekly.ispapps.com/src/pages/index.html");
+              setUrl(
+                "https://api.github.com/repos/IgorSprovieri/weekly-web/contents/readme.md"
+              );
               setWindowTitle("Weekly");
-              setIsIframe(true);
               setOpenWindow(true);
             }}
           >
@@ -89,9 +70,10 @@ export const Projects = () => {
         Button={
           <WebsiteButton
             onClick={() => {
-              setUrl("https://app.supermarket-list.ispapps.com");
+              setUrl(
+                "https://api.github.com/repos/IgorSprovieri/supermarket-list-web/contents/README.md"
+              );
               setWindowTitle("Supermarket List");
-              setIsIframe(true);
               setOpenWindow(true);
             }}
           >
@@ -121,7 +103,6 @@ export const Projects = () => {
                 "https://api.github.com/repos/IgorSprovieri/stock-controller-api/contents/readme.md"
               );
               setWindowTitle("Readme");
-              setIsIframe(false);
               setOpenWindow(true);
             }}
           >

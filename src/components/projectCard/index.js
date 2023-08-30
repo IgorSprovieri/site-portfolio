@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { GitHubButton } from "../../../components/buttons";
+import { GitHubButton } from "@/components/buttons";
 import styles from "./style.module.css";
 import Image from "next/image";
-import { Window } from "../../../components/window";
-import { MarkdownRender } from "../../../components/markdownRender";
-import { RepositoryImage } from "../../../components/images";
+import { Window } from "@/components/window";
+import { MarkdownRender } from "@/components/markdownRender";
+import { RepositoryImage } from "@/components/images";
 
 export const ProjectCard = ({ src, alt, title, children, Button, Icons }) => {
   return (
@@ -37,11 +37,13 @@ export const RepositoryCard = ({ repo }) => {
         ></MarkdownRender>
       </Window>
       <div className={styles["project-container"]}>
-        <RepositoryImage language={repo.language}>
-          {repo.name.lenght < 16
-            ? repo.name.replaceAll("-", " ")
-            : repo.name.slice(0, 16).replaceAll("-", " ")}
-        </RepositoryImage>
+        <Image
+          className={styles["project-image"]}
+          src={`/projects/${repo.name}.svg`}
+          alt={repo.name}
+          width={250}
+          height={120}
+        />
         <h3 className={styles["project-title"]}>
           {repo.name.lenght < 16
             ? repo.name.replaceAll("-", " ")

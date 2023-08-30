@@ -32,6 +32,22 @@
   margin: 0px;
 }
 
+.markdownContainer h3 > code {
+  background-color: #9dd9ff;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+.markdownContainer li {
+  margin-bottom: 4px;
+}
+
+.markdownContainer li > code {
+  background-color: #cfcfcf;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
 .markdownContainer pre {
   background-color: #ffffff;
   padding: 1rem;

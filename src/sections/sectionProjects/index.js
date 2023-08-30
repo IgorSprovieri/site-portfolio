@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 import { useState } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
-import { RepositoryCard } from "./projectCard";
+import { RepositoryCard } from "../../components/projectCard";
 
 export const SectionProjects = () => {
   const ignoreRepos = process.env.NEXT_PUBLIC_IGNORE_REPOS.split(",");
@@ -19,11 +19,7 @@ export const SectionProjects = () => {
 
   return (
     <>
-      <Window
-        title="Repositórios GitHub"
-        open={windowOpen}
-        setOpen={setWindowOpen}
-      >
+      <Window title="Outros Projetos" open={windowOpen} setOpen={setWindowOpen}>
         <div className={styles["list-repos-container"]}>
           {data?.data
             ?.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
