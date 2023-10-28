@@ -1,18 +1,14 @@
-import { AbilityCard } from "./abilityCard";
-import { Icon, SmallIcon } from "@/components";
+import { Icon, SmallIcon, AbilityCard } from "@/components";
 import styles from "./style.module.css";
 
 export const Frontend = () => {
   return (
     <div className={styles["abilities-container"]}>
-      <AbilityCard icons={<Icon src="/typescript.svg" alt="Typescript"></Icon>}>
-        Typescript para tipagem e superset do JS
-      </AbilityCard>
       <AbilityCard
         icons={
           <>
-            <SmallIcon src="/react.svg" alt="React"></SmallIcon>
-            <SmallIcon src="/next.svg" alt="Next"></SmallIcon>
+            <SmallIcon src="/icons/react.svg" alt="React" />
+            <SmallIcon src="/icons/next.svg" alt="Next" />
           </>
         }
       >
@@ -22,17 +18,20 @@ export const Frontend = () => {
         icons={
           <>
             <SmallIcon
-              src="/styled-components.svg"
+              src="/icons/styled-components.svg"
               alt="Styled Components"
-            ></SmallIcon>
-            <SmallIcon src="/chakra.svg" alt="Chakra UI"></SmallIcon>
+            />
+            <SmallIcon src="/icons/chakra.svg" alt="Chakra UI" />
           </>
         }
       >
         CSS Avançado com Styled Components e Chakra UI
       </AbilityCard>
-      <AbilityCard icons={<Icon src="/redux.svg" alt="Redux"></Icon>}>
+      <AbilityCard icons={<Icon src="/icons/redux.svg" alt="Redux" />}>
         Bibliotecas como Redux, Formik, Yup, React Query e Axios
+      </AbilityCard>
+      <AbilityCard icons={<Icon src="/icons/nextron.svg" alt="Nextron" />}>
+        Nextron para criação de aplicações desktop
       </AbilityCard>
     </div>
   );

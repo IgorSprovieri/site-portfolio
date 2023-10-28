@@ -34,19 +34,16 @@ export const SectionDescription = () => {
       <div className={styles["description-section-container"]}>
         <div ref={ref} className={styles["description-container"]}>
           <H1>
-            {isIntersecting ? (
+            {isIntersecting && (
               <TypeWriter typing={1}>
                 Olá, Muito prazer! Sou o Igor Sprovieri
               </TypeWriter>
-            ) : (
-              <></>
             )}
           </H1>
           <Paragraph>
-            Após atuar 3 anos como desenvolvedor Unity C#, migrei para a área de
-            desenvolvimento web e atualmente tenho conhecimento Fullstack.
-            Também tenho uma biblioteca para criação páginas web, inspirada em
-            React, chamada Frag Components.
+            Após atuar 3 anos como desenvolvedor de jogos, participando de mais
+            de 15 projetos para a Steam, migrei para a área de desenvolvimento
+            web e mobile com React, React Native e Node.
           </Paragraph>
           <Button
             onClick={() => window.open("https://wa.me/message/AQZS3NOUQULWL1")}

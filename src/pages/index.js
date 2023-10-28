@@ -8,13 +8,62 @@ import {
   Footer,
   Title,
 } from "@/sections";
+import { simpleGet } from "@/services/firebase/requests";
+import { getProjects } from "@/services/github/requests";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const experiences = await simpleGet("experiences");
+  const projectsData = await simpleGet("projects");
+  const githubProjects = await getProjects();
+
+  //name
+  //description
+  //language
+
+  const projects = githubProjects?.data
+    ?.map(({ name, language, description, updated_at }) => {
+      const project = projectsData.find(({ ref }) => {
+        return name === ref;
+      });
+
+      if (!project) {
+        return {
+          docId: name + updated_at,
+          name,
+          language: [language],
+          description,
+          updatedAt: updated_at,
+          imageUrl: `/projects/${name}.svg`,
+          visible: true,
+          highlight: false,
+          readme: `https://api.github.com/repos/IgorSprovieri/${name}/contents/readme.md`,
+        };
+      }
+
+      return {
+        ...project,
+        updatedAt: updated_at,
+        imageUrl: `/projects/${project.ref}.svg`,
+        readme: `https://api.github.com/repos/IgorSprovieri/${name}/contents/readme.md`,
+      };
+    })
+    .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+
+  const filteredProjects = projects?.filter(({ visible }) => {
+    return visible === true;
+  });
+
+  return {
+    props: { experiences: experiences || [], projects: filteredProjects || [] },
+  };
+};
+
+export default function Home({ experiences, projects }) {
   return (
     <>
-      <Header></Header>
+      <Header />
       <main className="c-main" name="section-home">
-        <SectionDescription></SectionDescription>
+        <SectionDescription />
 
         <Title
           firstText={"Habilidades que"}
@@ -22,7 +71,7 @@ export default function Home() {
           name={"section-abilities"}
         ></Title>
 
-        <SectionAbilities></SectionAbilities>
+        <SectionAbilities />
 
         <Title
           firstText={"Portfólio de"}
@@ -30,7 +79,7 @@ export default function Home() {
           name={"section-portfolio"}
         ></Title>
 
-        <SectionProjects></SectionProjects>
+        <SectionProjects data={projects} />
 
         <Title
           firstText={"Minhas"}
@@ -38,7 +87,7 @@ export default function Home() {
           name={"section-experiences"}
         ></Title>
 
-        <SectionExperiences></SectionExperiences>
+        <SectionExperiences data={experiences} />
 
         <Title
           firstText={"Frag"}
@@ -46,7 +95,7 @@ export default function Home() {
           name={"section-frag-components"}
         ></Title>
 
-        <SectionFrag></SectionFrag>
+        <SectionFrag />
       </main>
       <Footer></Footer>
     </>

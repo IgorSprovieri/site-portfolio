@@ -1,0 +1,56 @@
+.ability-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  text-align: center;
+  margin: 20px;
+}
+
+.ability-card p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+.ability-card-icons {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0px 20px;
+
+  width: 84px;
+  height: 90px;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  box-shadow: -2px 2px 5px rgb(180, 180, 180);
+}
+
+.ability-card-icons:hover {
+  animation: pingPong 1.5s infinite;
+}
+
+@keyframes pingPong {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .ability-card {
+    margin: 8px;
+  }
+
+  .ability-card-icons:hover {
+    animation: none;
+  }
+}

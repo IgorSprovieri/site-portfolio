@@ -1,10 +1,22 @@
 import styles from "./style.module.css";
-import { Experiences } from "./experiences";
+import { ExperienceCard } from "@/components";
 
-export const SectionExperiences = () => {
+export const SectionExperiences = ({ data }) => {
   return (
     <section className={styles["section-experience"]}>
-      <Experiences></Experiences>
+      {data.map(
+        ({ docId, description, title, ocupation, startDate, endDate }) => {
+          return (
+            <ExperienceCard
+              key={docId}
+              title={title + " - " + ocupation}
+              period={startDate + " - " + endDate}
+            >
+              {description}
+            </ExperienceCard>
+          );
+        }
+      )}
     </section>
   );
 };

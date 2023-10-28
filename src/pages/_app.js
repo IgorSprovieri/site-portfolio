@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/services/firebase/index";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 export default function App({ Component, pageProps }) {

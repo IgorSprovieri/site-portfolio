@@ -1,22 +1,19 @@
-import { ExperienceCard } from "./experienceCard";
+import { ExperienceCard } from "@/components";
 
 export const Experiences = () => {
   return (
     <>
-      {" "}
       <ExperienceCard title="Mapa da Programação - Tutor" period={"FEV 2023"}>
         Dou tutoria aos alunos nos cursos da empresa sobre desenvolvimento web e
-        mobile. Tenho aprendido a ensinar e ter paciência com quem está
-        iniciando.
+        mobile.
       </ExperienceCard>
       <ExperienceCard
-        title="Voluntariado - Desenvolvedor Fullstack"
-        period={"FEV 2023"}
+        title="Auto Posto Canindé - Administrador e Desenvolvedor"
+        period={"SET 2022"}
       >
-        Desenvolvi um site de inscrição para eventos para a Igreja Cristã
-        Maranata e um sistema auxiliar de gestão para o Auto Posto Canindé. As
-        tecnologias utilizadas foram: React, Next, Styled Components, Express,
-        TypeORM, mongo e postgres.
+        Atuo na administração da empresa e trabalho em um projeto web para
+        otimização dos processos internos. Utilizo React, Styled Components,
+        Express, TypeORM e Postgres.
       </ExperienceCard>
       <ExperienceCard
         title="Sprovieri Games - Desenvolvedor Unity C#"

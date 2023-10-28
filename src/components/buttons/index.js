@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import styles from "./style.module.css";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export const Button = ({ children, onClick }) => {
   return (
@@ -31,23 +32,33 @@ export const SwitchButton = ({ texts, value, setValue }) => {
     <div>
       <button
         className={`${styles["switch-left"]} ${
-          value === true
+          value === 0
             ? styles["switch-selected"]
             : styles["switch-non-selected"]
         }`}
-        onClick={() => setValue(true)}
+        onClick={() => setValue(0)}
       >
         {texts[0]}
       </button>
       <button
-        className={`${styles["switch-right"]} ${
-          value === false
+        className={`${styles["switch-center"]} ${
+          value === 1
             ? styles["switch-selected"]
             : styles["switch-non-selected"]
         }`}
-        onClick={() => setValue(false)}
+        onClick={() => setValue(1)}
       >
         {texts[1]}
+      </button>
+      <button
+        className={`${styles["switch-right"]} ${
+          value === 2
+            ? styles["switch-selected"]
+            : styles["switch-non-selected"]
+        }`}
+        onClick={() => setValue(2)}
+      >
+        {texts[2]}
       </button>
     </div>
   );

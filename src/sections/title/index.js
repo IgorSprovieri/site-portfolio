@@ -21,19 +21,11 @@ export const Title = ({ firstText, secondText, name }) => {
     <section ref={ref} className={styles["title-section"]} name={name}>
       <H1>
         {"{"}
-        {isIntersecting ? (
-          <TypeWriter typing={1}>{firstText}</TypeWriter>
-        ) : (
-          <></>
-        )}
+        {isIntersecting && <TypeWriter typing={1}>{firstText}</TypeWriter>}
       </H1>
       <H1>
         <IsBlue>
-          {isIntersecting ? (
-            <TypeWriter typing={1}>{secondText}</TypeWriter>
-          ) : (
-            <></>
-          )}
+          {isIntersecting && <TypeWriter typing={1}>{secondText}</TypeWriter>}
           {"}"}
         </IsBlue>
       </H1>

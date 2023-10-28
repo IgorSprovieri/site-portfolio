@@ -1,19 +1,17 @@
-import { AbilityCard } from "./abilityCard";
-import { Icon, SmallIcon } from "@/components";
+import { Icon, SmallIcon, AbilityCard } from "@/components";
 import styles from "./style.module.css";
 
 export const Backend = () => {
   return (
     <div className={styles["abilities-container"]}>
-      {" "}
-      <AbilityCard icons={<Icon src="/express-mini.svg" alt="Express"></Icon>}>
+      <AbilityCard icons={<Icon src="/icons/express-mini.svg" alt="Express" />}>
         Express para criação de rotas HTTP e Api&apos;s REST
       </AbilityCard>
       <AbilityCard
         icons={
           <>
-            <SmallIcon src="/postgres.svg" alt="Postgres"></SmallIcon>
-            <SmallIcon src="/mongo.svg" alt="MongoDB"></SmallIcon>
+            <SmallIcon src="/icons/postgres.svg" alt="Postgres" />
+            <SmallIcon src="/icons/mongo.svg" alt="MongoDB" />
           </>
         }
       >
@@ -22,8 +20,8 @@ export const Backend = () => {
       <AbilityCard
         icons={
           <>
-            <SmallIcon src="/type-orm-icon.png" alt="Type ORM"></SmallIcon>
-            <SmallIcon src="/sequelize.svg" alt="Sequelize"></SmallIcon>
+            <SmallIcon src="/icons/type-orm-icon.png" alt="Type ORM" />
+            <SmallIcon src="/icons/sequelize.svg" alt="Sequelize" />
           </>
         }
       >
@@ -32,8 +30,8 @@ export const Backend = () => {
       <AbilityCard
         icons={
           <>
-            <SmallIcon src="/aws.svg" alt="AWS"></SmallIcon>
-            <SmallIcon src="/railway.svg" alt="Railway"></SmallIcon>
+            <SmallIcon src="/icons/aws.svg" alt="AWS" />
+            <SmallIcon src="/icons/railway.svg" alt="Railway" />
           </>
         }
       >
