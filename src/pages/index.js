@@ -11,14 +11,10 @@ import {
 import { simpleGet } from "@/services/firebase/requests";
 import { getProjects } from "@/services/github/requests";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const experiences = await simpleGet("experiences");
   const projectsData = await simpleGet("projects");
   const githubProjects = await getProjects();
-
-  //name
-  //description
-  //language
 
   const projects = githubProjects?.data
     ?.map(({ name, language, description, updated_at }) => {
@@ -97,7 +93,7 @@ export default function Home({ experiences, projects }) {
 
         <SectionFrag />
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
