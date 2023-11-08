@@ -15,24 +15,23 @@ export const SectionFrag = () => {
       >
         <MarkdownRender
           url={
-            "https://api.github.com/repos/IgorSprovieri/create-frag-app/contents/readme.md"
+            "https://api.github.com/repos/IgorSprovieri/frag-components/contents/readme.md"
           }
-        ></MarkdownRender>
+        />
       </Window>
       <div className={styles["frag-container"]}>
         <div className={styles["frag-image-container"]}>
           <Image
-            src="/frag-components.svg"
-            alt="frag-components"
+            src="projects/frag-components.svg"
+            alt="Frag Components"
             height={96}
             width={96}
-          ></Image>
+          />
         </div>
-        <p className={styles["section-description"]}>
-          Frag Components é uma biblioteca para criação de páginas web que
-          utiliza template strings para criação de componentes HTML. A partir da
-          versão 1.0.x contará com um gerenciador de estados inspirado ao React
-          como useState e useEffect.
+        <p className={styles["frag-description"]}>
+          Frag Components é uma biblioteca que desenvolvi para criação de sites.
+          Utilizo tecnologias como JSX, virtual DOM, gerenciamento de estado
+          local e global.
         </p>
       </div>
       <Button onClick={() => setWindowOpen(true)}>Conhecer o Projeto</Button>

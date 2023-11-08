@@ -36,11 +36,16 @@ export const getServerSideProps = async () => {
         };
       }
 
+      const readmeFile = project?.readme || "readme.md";
+
+      if (project?.readme) {
+        project.readme = `https://api.github.com/repos/IgorSprovieri/${name}/contents/${readmeFile}`;
+      }
+
       return {
         ...project,
         updatedAt: updated_at,
         imageUrl: `/projects/${project.ref}.svg`,
-        readme: `https://api.github.com/repos/IgorSprovieri/${name}/contents/readme.md`,
       };
     })
     .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
@@ -65,7 +70,7 @@ export default function Home({ experiences, projects }) {
           firstText={"Habilidades que"}
           secondText={"Domino"}
           name={"section-abilities"}
-        ></Title>
+        />
 
         <SectionAbilities />
 
@@ -73,7 +78,7 @@ export default function Home({ experiences, projects }) {
           firstText={"Portfólio de"}
           secondText={"Projetos"}
           name={"section-portfolio"}
-        ></Title>
+        />
 
         <SectionProjects data={projects} />
 
@@ -81,7 +86,7 @@ export default function Home({ experiences, projects }) {
           firstText={"Minhas"}
           secondText={"Experiências"}
           name={"section-experiences"}
-        ></Title>
+        />
 
         <SectionExperiences data={experiences} />
 
@@ -89,7 +94,7 @@ export default function Home({ experiences, projects }) {
           firstText={"Frag"}
           secondText={"Components"}
           name={"section-frag-components"}
-        ></Title>
+        />
 
         <SectionFrag />
       </main>
