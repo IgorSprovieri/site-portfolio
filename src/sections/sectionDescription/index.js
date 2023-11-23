@@ -45,9 +45,7 @@ export const SectionDescription = () => {
             de 15 projetos para a Steam, migrei para a área de desenvolvimento
             web e mobile com React, React Native e Node.
           </Paragraph>
-          <Button
-            onClick={() => window.open("https://wa.me/message/AQZS3NOUQULWL1")}
-          >
+          <Button onClick={() => window.open("https://wa.me/5511997612295")}>
             ENTRAR EM CONTATO
           </Button>
         </div>
